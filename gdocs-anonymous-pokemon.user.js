@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Google Docs Anonymous Pokémon
-// @namespace    https://github.com/YOUR_GITHUB_USERNAME/gdocs-anonymous-pokemon
+// @namespace    https://github.com/liangforstudy/gdocs-anonymous-pokemon
 // @version      1.3.0
 // @description  Replaces Google Docs/Sheets/Slides "Anonymous Animal" viewers with Pokémon (name + avatar).
 // @author       YOUR_NAME
@@ -10,10 +10,10 @@
 // @connect      images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com
 // @connect      *
 // @run-at       document-idle
-// @homepageURL  https://github.com/YOUR_GITHUB_USERNAME/gdocs-anonymous-pokemon
-// @supportURL   https://github.com/YOUR_GITHUB_USERNAME/gdocs-anonymous-pokemon/issues
-// @downloadURL  https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gdocs-anonymous-pokemon/main/gdocs-anonymous-pokemon.user.js
-// @updateURL    https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gdocs-anonymous-pokemon/main/gdocs-anonymous-pokemon.user.js
+// @homepageURL  https://github.com/liangforstudy/gdocs-anonymous-pokemon
+// @supportURL   https://github.com/liangforstudy/gdocs-anonymous-pokemon/issues
+// @downloadURL  https://raw.githubusercontent.com/liangforstudy/gdocs-anonymous-pokemon/main/gdocs-anonymous-pokemon.user.js
+// @updateURL    https://raw.githubusercontent.com/liangforstudy/gdocs-anonymous-pokemon/main/gdocs-anonymous-pokemon.user.js
 // ==/UserScript==
 
 (function () {
@@ -40,7 +40,7 @@
     mode: 'files',
     url: [
       deviantArtUrl,
-      'https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/gdocs-anonymous-pokemon/main/sprites/{sprite}.png',
+      'https://raw.githubusercontent.com/liangforstudy/gdocs-anonymous-pokemon/main/sprites/{sprite}.png',
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{dex}.png',
     ],
 
