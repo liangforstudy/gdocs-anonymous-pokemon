@@ -12,7 +12,7 @@ A Tampermonkey userscript that turns Google Docs / Sheets / Slides **anonymous a
 
 ## What it changes
 
-- **Avatars**: any image or background that points at `ssl.gstatic.com/docs/common/profile/<animal>_lg.png` is replaced with the matching sprite.
+- **Avatars**: any image or background that points at `ssl.gstatic.com/docs/common/profile/<animal>_lg.png` is replaced with the matching Shuffle sprite.
 - **Avatar colour**: Google gives each anonymous viewer a random circle colour. The script recolours it by the Pokémon's primary type (Quaquaval on water blue rather than a misleading green). Set `BACKGROUND = 'google'` to keep Google's colour, or give one Pokémon its own with `color: '#8d6e63'` in `ANIMALS`.
 - **Names**: "Anonymous &lt;Animal&gt;" in tooltips, cursor flags, the viewer list and menus. Text inside the document itself is never touched.
 - **Any language**: the script reads each viewer's display name off their avatar, so translated names work too ("Anonymer Ameisenbär" becomes "Anonymer Heatmor").
@@ -25,9 +25,9 @@ Everything runs locally in your browser and only changes what you see.
 
 Avatars use Pokémon Shuffle-style icons, tried in this order:
 
-1. **Gen 8–9 and regional forms**: [Loran-Hemlock's icons](https://www.deviantart.com/loran-hemlock/gallery), loaded straight from DeviantArt's CDN at 128×128. Nothing is re-hosted in this repo, and you don't need to download anything. The `DEVIANTART` table in the script maps each Pokémon to its deviation.
-2. **Gen 1–7**: the [`sprites/`](sprites) folder, named `<dex>.png`, or `<dex>-<region>.png` for regional forms such as `128-paldea.png` (128×128, transparent). These are cut from the Pokémon Shuffle sheets in [`sheets/`](sheets). To change or add one, edit [`sheets/cells.txt`](sheets/cells.txt) (dex, gen, column,row of the cell, counted from 0) and run `powershell -File sheets\crop.ps1`.
-3. **Anything else**: official artwork from [PokeAPI/sprites](https://github.com/PokeAPI/sprites).
+1. **Gen 1–7**: the [`sprites/`](sprites) folder, named `<dex>.png`, or `<dex>-<region>.png` for regional forms such as `128-paldea.png` (128×128, transparent). These are cut from the Pokémon Shuffle sheets in [`sheets/`](sheets). To change or add one, edit [`sheets/cells.txt`](sheets/cells.txt) (dex, gen, column,row of the cell, counted from 0) and run `powershell -File sheets\crop.ps1`.
+2. **Gen 8–9 and regional forms**: [Loran-Hemlock's icons](https://www.deviantart.com/loran-hemlock/gallery), loaded straight from DeviantArt's CDN at 128×128. Nothing is re-hosted in this repo, and you don't need to download anything. The `DEVIANTART` table in the script maps each Pokémon to its deviation.
+3. **Fallback**: official artwork from [PokeAPI/sprites](https://github.com/PokeAPI/sprites).
 
 To add another of Loran-Hemlock's icons, open its deviation page, find the `images-wixmp-…` image URL in the page source, and add `[page slug, path after /f/ up to .png, token]` to `DEVIANTART`.
 
