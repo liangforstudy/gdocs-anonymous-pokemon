@@ -193,7 +193,7 @@ Don't like a pick? Change the `dex` and `name` for that animal in `ANIMALS` in t
 ## Credits
 
 - Gen 1–7 icons: ripped from *Pokémon Shuffle* (3DS), via [The Spriters Resource](https://www.spriters-resource.com/3ds/pokemonshuffle/).
-- Gen 8–9 and regional-form Shuffle-style icons by [Loran-Hemlock](https://www.deviantart.com/loran-hemlock/gallery), loaded from DeviantArt (not re-hosted), personal and non-commercial use only per the artist's terms. All 48 used are listed with their deviation pages in the script's `DEVIANTART` table (marked 🌐 in the tables above), and Ctrl/Shift+click on one in a Doc opens its page.
+- Gen 8–9 and regional-form Shuffle-style icons by [Loran-Hemlock](https://www.deviantart.com/loran-hemlock/gallery), loaded from DeviantArt (not re-hosted), personal and non-commercial use only per the artist's terms. All 48 used are listed with their deviation pages in the script's `DEVIANTART` table (marked 🌐 in the tables above), and Ctrl+click / Shift+click on one in a Doc opens its page.
 
 ## Eplouge
 
