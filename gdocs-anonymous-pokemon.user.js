@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Google Docs Anonymous Pokémon
+// @name         Google Docs Anonymous Pokémon (DeviantArt icons)
 // @namespace    https://github.com/liangforstudy/gdocs-anonymous-pokemon
 // @version      1.4.3
-// @description  Replaces Google Docs/Sheets/Slides "Anonymous Animal" viewers with Pokémon (name + avatar).
+// @description  Replaces Google Docs/Sheets/Slides "Anonymous Animal" viewers with Pokémon (name + avatar). Gen 8–9 icons by Loran-Hemlock, loaded from DeviantArt.
 // @author       liangforstudy
 // @match        https://docs.google.com/*
 // @grant        GM_xmlhttpRequest
@@ -12,8 +12,8 @@
 // @run-at       document-idle
 // @homepageURL  https://github.com/liangforstudy/gdocs-anonymous-pokemon
 // @supportURL   https://github.com/liangforstudy/gdocs-anonymous-pokemon/issues
-// @downloadURL  https://raw.githubusercontent.com/liangforstudy/gdocs-anonymous-pokemon/main/gdocs-anonymous-pokemon.user.js
-// @updateURL    https://raw.githubusercontent.com/liangforstudy/gdocs-anonymous-pokemon/main/gdocs-anonymous-pokemon.user.js
+// @downloadURL  https://raw.githubusercontent.com/liangforstudy/gdocs-anonymous-pokemon/deviantart-icons/gdocs-anonymous-pokemon.user.js
+// @updateURL    https://raw.githubusercontent.com/liangforstudy/gdocs-anonymous-pokemon/deviantart-icons/gdocs-anonymous-pokemon.user.js
 // ==/UserScript==
 
 (function () {
@@ -40,7 +40,7 @@
     mode: 'files',
     url: [
       deviantArtUrl,
-      'https://raw.githubusercontent.com/liangforstudy/gdocs-anonymous-pokemon/main/sprites/{sprite}.png',
+      'https://raw.githubusercontent.com/liangforstudy/gdocs-anonymous-pokemon/deviantart-icons/sprites/{sprite}.png',
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{dex}.png',
     ],
 

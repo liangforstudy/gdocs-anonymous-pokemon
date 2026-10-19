@@ -2,6 +2,8 @@
 
 A Tampermonkey userscript that turns Google Docs / Sheets / Slides **anonymous animals** into Pokémon.
 
+> **This is the `deviantart-icons` branch.** It adds gen 8–9 and regional-form icons by [Loran-Hemlock](https://www.deviantart.com/loran-hemlock/gallery), loaded from DeviantArt. It installs as a separate script, *Google Docs Anonymous Pokémon (DeviantArt icons)*; install only one of the two. The [`main` branch](https://github.com/liangforstudy/gdocs-anonymous-pokemon) uses Pokémon Shuffle icons only.
+
 *Anonymous Goose* becomes *Anonymous Quaquaval*, *Anonymous Hamster* becomes *Anonymous Pikachu*, and the avatar icon is swapped for the Pokémon's sprite.
 
 ## Install
