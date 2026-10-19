@@ -61,7 +61,7 @@ If a sheet has gaps or extra forms, pin any Pokémon to a specific cell with `po
 
 ### Sprites needed per generation
 
-🌐 = loaded from Loran-Hemlock's DeviantArt, ✅ = bundled in `sprites/`, unmarked = PokeAPI fallback for now, 😉 = winks half the time.
+✅ = bundled in `sprites/`, 😉 = with winks, 🌐 = loaded from Loran-Hemlock's DeviantArt, unmarked = PokeAPI fallback for now.
 
 | Gen | Count | Pokémon |
 |---|---|---|
@@ -193,13 +193,13 @@ Don't like a pick? Change the `dex` and `name` for that animal in `ANIMALS` in t
 ## Credits
 
 - Gen 1–7 icons: ripped from *Pokémon Shuffle* (3DS), via [The Spriters Resource](https://www.spriters-resource.com/3ds/pokemonshuffle/).
-- Gen 8–9 and regional-form Shuffle-style icons by [Loran-Hemlock](https://www.deviantart.com/loran-hemlock/gallery), loaded from DeviantArt (not re-hosted), personal and non-commercial use only per the artist's terms. All 48 used are listed with their deviation pages in the script's `DEVIANTART` table (marked 🌐 in the tables above), and Ctrl/Shift+click on one in a Doc opens its page.
+- Gen 8–9 and regional-form Shuffle-style icons by [Loran-Hemlock](https://www.deviantart.com/loran-hemlock/gallery), loaded from DeviantArt (not re-hosted), personal and non-commercial use only per the artist's terms. All 48 used are listed with their deviation pages in the script's `DEVIANTART` table (marked 🌐 in the tables above), and Ctrl+click / Shift+click on one in a Doc opens its page.
 
 ## Eplouge
 
 ## AI Usage
 
-I did most of the cherry Picking for the sprites, claude did the code, as well as the Deviantart fetch system. it will be inpossible to make the code without dear Claude.
+I did most of the cherry Picking for the sprites, claude did the code, as well as the Deviantart fetch system. it will be inpossible to make the code without Claude.
 
 ## Disclaimer
 
