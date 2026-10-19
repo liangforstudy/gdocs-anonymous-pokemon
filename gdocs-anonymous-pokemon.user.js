@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google Docs Anonymous Pokémon
 // @namespace    https://github.com/liangforstudy/gdocs-anonymous-pokemon
-// @version      1.4.2
+// @version      1.4.3
 // @description  Replaces Google Docs/Sheets/Slides "Anonymous Animal" viewers with Pokémon (name + avatar).
 // @author       liangforstudy
 // @match        https://docs.google.com/*
@@ -256,7 +256,7 @@
     ] },
     dolphin:      { label: 'Dolphin',       dex: 963, name: 'Finizen', alts: [
       { dex: 964, name: 'Palafin' },
-      { dex: 964, name: 'Palafin', sprite: '964-hero' },
+      { dex: 964, name: 'SuperHero Dolphin', sprite: '964-hero' }, // easter egg: Palafin's Hero form
     ] },
     dragon:       { label: 'Dragon',        dex: 149, name: 'Dragonite', alts: [
       { dex: 147, name: 'Dratini' },

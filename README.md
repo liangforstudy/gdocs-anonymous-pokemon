@@ -73,7 +73,7 @@ If a sheet has gaps or extra forms, pin any Pokémon to a specific cell with `po
 | 6 | 30 | Chespin ✅ 😉, Quilladin ✅, Chesnaught ✅, Fennekin ✅ 😉, Braixen ✅, Delphox ✅, Froakie ✅ 😉, Frogadier ✅, Greninja ✅, Diggersby ✅, Litleo ✅, Pyroar ✅, Gogoat ✅, Pancham ✅, Pangoro ✅, Furfrou ✅, Espurr ✅, Meowstic ✅, Helioptile ✅, Heliolisk ✅, Tyrunt ✅, Tyrantrum ✅, Amaura ✅, Aurorus ✅, Pumpkaboo ✅, Gourgeist ✅, Noibat ✅, Noivern ✅, Hoopa Unbound ✅, Hoopa ✅ |
 | 7 | 21 | Alolan Rattata ✅, Alolan Raticate ✅, Alolan Raichu ✅, Alolan Sandshrew ✅, Alolan Sandslash ✅, Alolan Vulpix ✅, Alolan Ninetales ✅, Alolan Dugtrio ✅, Alolan Meowth ✅, Alolan Persian ✅, Litten ✅, Torracat ✅, Incineroar ✅, Oricorio ✅, Rockruff ✅, Lycanroc ✅, Mudbray ✅, Mudsdale ✅, Oranguru ✅, Passimian ✅, Komala ✅ |
 | 8 | 16 | Hisuian Growlithe 🌐, Hisuian Arcanine 🌐, Galarian Slowbro 🌐, Hisuian Sneasel 🌐, Hisuian Samurott 🌐, Hisuian Zorua 🌐, Hisuian Zoroark 🌐, Raboot 🌐, Rookidee 🌐, Corvisquire 🌐, Corviknight 🌐, Morpeko 🌐, Wyrdeer 🌐, Ursaluna 🌐, Bloodmoon Ursaluna 🌐, Sneasler 🌐 |
-| 9 | 29 | Paldean Tauros 🌐, Paldean Wooper 🌐, Sprigatito 🌐, Floragato 🌐, Meowscarada 🌐, Quaxly 🌐, Quaxwell 🌐, Quaquaval 🌐, Fidough 🌐, Dachsbun 🌐, Maschiff 🌐, Mabosstiff 🌐, Grafaiai 🌐, Finizen 🌐, Palafin 🌐, Cyclizar 🌐, Greavard 🌐, Houndstone 🌐, Flamigo 🌐, Cetoddle 🌐, Cetitan 🌐, Annihilape 🌐, Clodsire 🌐, Farigiraf 🌐, Frigibax 🌐, Arctibax 🌐, Baxcalibur 🌐, Koraidon 🌐, Miraidon 🌐 |
+| 9 | 30 | Paldean Tauros 🌐, Paldean Wooper 🌐, Sprigatito 🌐, Floragato 🌐, Meowscarada 🌐, Quaxly 🌐, Quaxwell 🌐, Quaquaval 🌐, Fidough 🌐, Dachsbun 🌐, Maschiff 🌐, Mabosstiff 🌐, Grafaiai 🌐, Finizen 🌐, Palafin 🌐, SuperHero Dolphin 🌐, Cyclizar 🌐, Greavard 🌐, Houndstone 🌐, Flamigo 🌐, Cetoddle 🌐, Cetitan 🌐, Annihilape 🌐, Clodsire 🌐, Farigiraf 🌐, Frigibax 🌐, Arctibax 🌐, Baxcalibur 🌐, Koraidon 🌐, Miraidon 🌐 |
 
 ## Animal → Pokémon map
 
@@ -106,7 +106,7 @@ Where an animal lists more than one Pokémon, one is picked at random for that a
 | Crow | Murkrow #198 / Honchkrow #430 / Rookidee #821 / Corvisquire #822 / Corviknight #823 | 2 / 4 / 8 |
 | Dingo | Rockruff #744 / Growlithe #58 / Arcanine #59 / Hisuian Growlithe #58 / Hisuian Arcanine #59 / Houndour #228 / Houndoom #229 / Snubbull #209 / Granbull #210 / Electrike #309 / Manectric #310 / Lillipup #506 / Herdier #507 / Stoutland #508 / Furfrou #676 / Fidough #926 / Dachsbun #927 / Maschiff #942 / Mabosstiff #943 / Greavard #971 / Houndstone #972 | 7 / 1 / 8 / 2 / 3 / 5 / 6 / 9 |
 | Dinosaur | Tyrantrum #697 / Tyrunt #696 / Amaura #698 / Aurorus #699 / Koraidon #1007 / Cyclizar #967 / Miraidon #1008 | 6 / 9 |
-| Dolphin | Finizen #963 / Palafin #964 (+1 Pikachu forms) | 9 |
+| Dolphin | Finizen #963 / Palafin #964 / SuperHero Dolphin #964 | 9 |
 | Dragon | Dragonite #149 / Dratini #147 / Dragonair #148 / Charizard #6 / Bagon #371 / Shelgon #372 / Salamence #373 / Gible #443 / Gabite #444 / Garchomp #445 / Axew #610 / Fraxure #611 / Haxorus #612 / Deino #633 / Zweilous #634 / Hydreigon #635 / Druddigon #621 / Rayquaza #384 / Dialga #483 / Palkia #484 / Reshiram #643 / Zekrom #644 / Kyurem #646 / Frigibax #996 / Arctibax #997 / Baxcalibur #998 (+1 Pikachu forms) | 1 / 3 / 4 / 5 / 9 |
 | Duck | Psyduck #54 / Golduck #55 / Farfetch'd #83 / Ducklett #580 / Swanna #581 / Quaxly #912 / Quaxwell #913 | 1 / 5 / 9 |
 | Dumbo Octopus | Octillery #224 / Remoraid #223 | 2 |
