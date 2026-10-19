@@ -319,3 +319,15 @@
 741-pau  7  3,2    Oricorio (Pa'u)
 741-sensu 7 4,2    Oricorio (Sensu)
 750      7  4,3    Mudsdale
+
+# Replacements for icons that were only on DeviantArt (main branch)
+86       1  7,10   Seel
+87       1  8,10   Dewgong
+320      3  12,5   Wailmer
+321      3  0,6    Wailord
+702      6  8,6    Dedenne
+702-wink 6  0,7    Dedenne (wink)
+728      7  6,0    Popplio
+729      7  7,0    Brionne
+730      7  8,0    Primarina
+777      7  4,6    Togedemaru
