@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google Docs Anonymous Pokémon (DeviantArt icons)
 // @namespace    https://github.com/liangforstudy/gdocs-anonymous-pokemon
-// @version      1.4.3
+// @version      1.5.0
 // @description  Replaces Google Docs/Sheets/Slides "Anonymous Animal" viewers with Pokémon (name + avatar). Gen 8–9 icons by Loran-Hemlock, loaded from DeviantArt.
 // @author       liangforstudy
 // @match        https://docs.google.com/*
@@ -28,7 +28,7 @@
   //  'files'  – one image per Pokémon. `url` is a template; {dex} is the
   //             National Dex number, {dex3} is zero-padded to 3 digits
   //             (e.g. 025), {name} is the lowercase Pokémon name, {sprite}
-  //             is the entry's `sprite` (e.g. 128-paldea) or else {dex}.
+  //             is the entry's `sprite` (e.g. 19-alola) or else {dex}.
   //
   //  'sheets' – one sprite sheet per generation, cropped on the fly.
   //             Fill in one entry per gen (see SHEET_TEMPLATE below).
@@ -67,7 +67,7 @@
   // resizes them server-side and applies its watermark.
   // sprite id -> [deviation page slug, CDN file path, signed token]
   const DEVIANTART = {
-'128-paldea-blaze': ['Paldean-Tauros---Blaze-%28Pk.-Shuffle-Style-Icon%29-1176380263', '2724c149-01f0-4ac7-8847-00bfc56254f7/djgdwtj-9e620825-a324-4216-8417-00d9019bff9f.png', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8yNzI0YzE0OS0wMWYwLTRhYzctODg0Ny0wMGJmYzU2MjU0ZjcvZGpnZHd0ai05ZTYyMDgyNS1hMzI0LTQyMTYtODQxNy0wMGQ5MDE5YmZmOWYucG5nIiwiaGVpZ2h0IjoiPD04MDAiLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ii93bS8yNzI0YzE0OS0wMWYwLTRhYzctODg0Ny0wMGJmYzU2MjU0ZjcvbG9yYW4taGVtbG9jay00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.gZTCaIxR3JowAipFyp6NxFj3b8UCVqEdcHy1ktziIkg'],
+    '128-paldea-blaze': ['Paldean-Tauros---Blaze-%28Pk.-Shuffle-Style-Icon%29-1176380263', '2724c149-01f0-4ac7-8847-00bfc56254f7/djgdwtj-9e620825-a324-4216-8417-00d9019bff9f.png', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8yNzI0YzE0OS0wMWYwLTRhYzctODg0Ny0wMGJmYzU2MjU0ZjcvZGpnZHd0ai05ZTYyMDgyNS1hMzI0LTQyMTYtODQxNy0wMGQ5MDE5YmZmOWYucG5nIiwiaGVpZ2h0IjoiPD04MDAiLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ii93bS8yNzI0YzE0OS0wMWYwLTRhYzctODg0Ny0wMGJmYzU2MjU0ZjcvbG9yYW4taGVtbG9jay00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.gZTCaIxR3JowAipFyp6NxFj3b8UCVqEdcHy1ktziIkg'],
     '128-paldea-aqua': ['Paldean-Tauros---Aqua-%28Pk.-Shuffle-Style-Icon%29-1176379106', '2724c149-01f0-4ac7-8847-00bfc56254f7/djgdvxe-32543cef-c199-4108-850b-f5c96179bec8.png', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8yNzI0YzE0OS0wMWYwLTRhYzctODg0Ny0wMGJmYzU2MjU0ZjcvZGpnZHZ4ZS0zMjU0M2NlZi1jMTk5LTQxMDgtODUwYi1mNWM5NjE3OWJlYzgucG5nIiwiaGVpZ2h0IjoiPD04MDAiLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ii93bS8yNzI0YzE0OS0wMWYwLTRhYzctODg0Ny0wMGJmYzU2MjU0ZjcvbG9yYW4taGVtbG9jay00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.MkhNAUW9VOJE73m0y8LoZD2LC56SWwIrAd7efW3pHY4'],
     '194-paldea': ['Paldean-Wooper-%28Pokemon-Shuffle-Style-Icon%29-924729399', '2724c149-01f0-4ac7-8847-00bfc56254f7/dfak5rr-904e1be5-74d9-43a2-9f85-1a80f34196ec.png', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8yNzI0YzE0OS0wMWYwLTRhYzctODg0Ny0wMGJmYzU2MjU0ZjcvZGZhazVyci05MDRlMWJlNS03NGQ5LTQzYTItOWY4NS0xYTgwZjM0MTk2ZWMucG5nIiwiaGVpZ2h0IjoiPD0xMDI0Iiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiL3dtLzI3MjRjMTQ5LTAxZjAtNGFjNy04ODQ3LTAwYmZjNTYyNTRmNy9sb3Jhbi1oZW1sb2NrLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.HGqojXRCHRw5Qo7YlwhAVKTcEkrlGJQZ5rL9YfiSQas'],
     822: ['Corvisquire-%28Pokemon-Shuffle-Style-Icon%29-1344604269', '2724c149-01f0-4ac7-8847-00bfc56254f7/dm8jjal-98e2a439-f3b2-4ea9-ab6e-a912df46dbe2.png', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8yNzI0YzE0OS0wMWYwLTRhYzctODg0Ny0wMGJmYzU2MjU0ZjcvZG04amphbC05OGUyYTQzOS1mM2IyLTRlYTktYWI2ZS1hOTEyZGY0NmRiZTIucG5nIiwiaGVpZ2h0IjoiPD04MDAiLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ii93bS8yNzI0YzE0OS0wMWYwLTRhYzctODg0Ny0wMGJmYzU2MjU0ZjcvbG9yYW4taGVtbG9jay00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.HJeHj--edga9ninCCab-xJtzsd3V-68NTFQytIICCMk'],
@@ -131,7 +131,7 @@
   const REPLACE_NAMES = true;
 
   // Avatar circle colour. Google gives each anonymous viewer a random colour,
-  // which can clash with the Pokémon (Quaquaval on green looks like a Grass type).
+  // which can clash with the Pokémon (Swanna on green looks like a Grass type).
   //  'type'   – colour the circle by the Pokémon's primary type (default)
   //  'google' – keep Google's colour
   const BACKGROUND = 'type';
@@ -151,33 +151,33 @@
   // ---------------------------------------------------------------------------
 
   const ANIMALS = {
-    alligator:    { label: 'Alligator',     dex: 160, name: 'Feraligatr', alts: [
+    alligator:    { label: 'Alligator',    dex: 160, name: 'Feraligatr', alts: [
       { dex: 158, name: 'Totodile', wink: true },
       { dex: 159, name: 'Croconaw' },
       { dex: 551, name: 'Sandile' },
       { dex: 552, name: 'Krokorok' },
       { dex: 553, name: 'Krookodile' },
     ] },
-    anteater:     { label: 'Anteater',      dex: 631, name: 'Heatmor' },
-    armadillo:    { label: 'Armadillo',     dex: 28, name: 'Sandslash', alts: [
+    anteater:     { label: 'Anteater',     dex: 631, name: 'Heatmor' },
+    armadillo:    { label: 'Armadillo',    dex: 28, name: 'Sandslash', alts: [
       { dex: 28, name: 'Alolan Sandslash', sprite: '28-alola' },
     ] },
-    auroch:       { label: 'Auroch',        dex: 128, name: 'Paldean Tauros', sprite: '128-paldea', alts: [
+    auroch:       { label: 'Auroch',       dex: 128, name: 'Paldean Tauros', sprite: '128-paldea', alts: [
       { dex: 128, name: 'Paldean Tauros', sprite: '128-paldea-blaze' },
       { dex: 128, name: 'Paldean Tauros', sprite: '128-paldea-aqua' },
       { dex: 128, name: 'Tauros' },
     ] },
-    axolotl:      { label: 'Axolotl',       dex: 194, name: 'Wooper', alts: [
+    axolotl:      { label: 'Axolotl',      dex: 194, name: 'Wooper', alts: [
       { dex: 195, name: 'Quagsire' },
       { dex: 194, name: 'Paldean Wooper', sprite: '194-paldea' },
       { dex: 258, name: 'Mudkip', wink: true },
       { dex: 259, name: 'Marshtomp' },
       { dex: 260, name: 'Swampert' },
     ] },
-    badger:       { label: 'Badger',        dex: 264, name: 'Linoone', alts: [
+    badger:       { label: 'Badger',       dex: 264, name: 'Linoone', alts: [
       { dex: 263, name: 'Zigzagoon' },
     ] },
-    bat:          { label: 'Bat',           dex: 41, name: 'Zubat', alts: [
+    bat:          { label: 'Bat',          dex: 41, name: 'Zubat', alts: [
       { dex: 42, name: 'Golbat' },
       { dex: 169, name: 'Crobat' },
       { dex: 527, name: 'Woobat' },
@@ -185,46 +185,46 @@
       { dex: 714, name: 'Noibat' },
       { dex: 715, name: 'Noivern' },
     ] },
-    beaver:       { label: 'Beaver',        dex: 399, name: 'Bidoof', alts: [
+    beaver:       { label: 'Beaver',       dex: 399, name: 'Bidoof', alts: [
       { dex: 400, name: 'Bibarel' },
     ] },
-    blobfish:     { label: 'Blobfish',      dex: 132, name: 'Ditto' },
-    buffalo:      { label: 'Buffalo',       dex: 626, name: 'Bouffalant' },
-    camel:        { label: 'Camel',         dex: 323, name: 'Camerupt', alts: [
+    blobfish:     { label: 'Blobfish',     dex: 132, name: 'Ditto' },
+    buffalo:      { label: 'Buffalo',      dex: 626, name: 'Bouffalant' },
+    camel:        { label: 'Camel',        dex: 323, name: 'Camerupt', alts: [
       { dex: 322, name: 'Numel' },
     ] },
-    capybara:     { label: 'Capybara',      dex: 980, name: 'Clodsire', alts: [
+    capybara:     { label: 'Capybara',     dex: 980, name: 'Clodsire', alts: [
       { dex: 399, name: 'Bidoof' },
       { dex: 400, name: 'Bibarel' },
     ] },
-    chameleon:    { label: 'Chameleon',     dex: 352, name: 'Kecleon' },
-    cheetah:      { label: 'Cheetah',       dex: 53, name: 'Persian', alts: [
+    chameleon:    { label: 'Chameleon',    dex: 352, name: 'Kecleon' },
+    cheetah:      { label: 'Cheetah',      dex: 53, name: 'Persian', alts: [
       { dex: 53, name: 'Alolan Persian', sprite: '53-alola' },
     ] },
-    chicken:      { label: 'Chicken',       dex: 255, name: 'Torchic', wink: true, alts: [
+    chicken:      { label: 'Chicken',      dex: 255, name: 'Torchic', wink: true, alts: [
       { dex: 256, name: 'Combusken' },
       { dex: 257, name: 'Blaziken' },
     ] },
-    chipmunk:     { label: 'Chipmunk',      dex: 417, name: 'Pachirisu', wink: true },
-    chinchilla:   { label: 'Chinchilla',    dex: 572, name: 'Minccino', alts: [
+    chipmunk:     { label: 'Chipmunk',     dex: 417, name: 'Pachirisu', wink: true },
+    chinchilla:   { label: 'Chinchilla',   dex: 572, name: 'Minccino', alts: [
       { dex: 573, name: 'Cinccino' },
     ] },
-    chupacabra:   { label: 'Chupacabra',    dex: 302, name: 'Sableye', alts: [
+    chupacabra:   { label: 'Chupacabra',   dex: 302, name: 'Sableye', alts: [
       { dex: 302, name: 'Mega Sableye', sprite: '302-mega' },
     ] },
-    cormorant:    { label: 'Cormorant',     dex: 279, name: 'Pelipper', alts: [
+    cormorant:    { label: 'Cormorant',    dex: 279, name: 'Pelipper', alts: [
       { dex: 278, name: 'Wingull' },
     ] },
-    coyote:       { label: 'Coyote',        dex: 261, name: 'Poochyena', alts: [
+    coyote:       { label: 'Coyote',       dex: 261, name: 'Poochyena', alts: [
       { dex: 262, name: 'Mightyena' },
     ] },
-    crow:         { label: 'Crow',          dex: 198, name: 'Murkrow', alts: [
+    crow:         { label: 'Crow',         dex: 198, name: 'Murkrow', alts: [
       { dex: 430, name: 'Honchkrow' },
       { dex: 821, name: 'Rookidee' },
       { dex: 822, name: 'Corvisquire' },
       { dex: 823, name: 'Corviknight' },
     ] },
-    dingo:        { label: 'Dingo',         dex: 744, name: 'Rockruff', alts: [
+    dingo:        { label: 'Dingo',        dex: 744, name: 'Rockruff', alts: [
       { dex: 58, name: 'Growlithe' },
       { dex: 59, name: 'Arcanine' },
       { dex: 58, name: 'Hisuian Growlithe', sprite: '58-hisui' },
@@ -246,7 +246,7 @@
       { dex: 971, name: 'Greavard' },
       { dex: 972, name: 'Houndstone' },
     ] },
-    dinosaur:     { label: 'Dinosaur',      dex: 697, name: 'Tyrantrum', alts: [
+    dinosaur:     { label: 'Dinosaur',     dex: 697, name: 'Tyrantrum', alts: [
       { dex: 696, name: 'Tyrunt' },
       { dex: 698, name: 'Amaura' },
       { dex: 699, name: 'Aurorus' },
@@ -254,11 +254,14 @@
       { dex: 967, name: 'Cyclizar' },
       { dex: 1008, name: 'Miraidon' },
     ] },
-    dolphin:      { label: 'Dolphin',       dex: 963, name: 'Finizen', alts: [
+    dolphin:      { label: 'Dolphin',      dex: 963, name: 'Finizen', alts: [
       { dex: 964, name: 'Palafin' },
       { dex: 964, name: 'SuperHero Dolphin', sprite: '964-hero' }, // easter egg: Palafin's Hero form
+      { dex: 320, name: 'Wailmer' },
+      { dex: 321, name: 'Wailord' },
+      { dex: 729, name: 'Brionne' },
     ] },
-    dragon:       { label: 'Dragon',        dex: 149, name: 'Dragonite', alts: [
+    dragon:       { label: 'Dragon',       dex: 149, name: 'Dragonite', alts: [
       { dex: 147, name: 'Dratini' },
       { dex: 148, name: 'Dragonair' },
       { dex: 6, name: 'Charizard' },
@@ -286,7 +289,7 @@
       { dex: 997, name: 'Arctibax' },
       { dex: 998, name: 'Baxcalibur' },
     ] },
-    duck:         { label: 'Duck',          dex: 54, name: 'Psyduck', alts: [
+    duck:         { label: 'Duck',         dex: 54, name: 'Psyduck', alts: [
       { dex: 55, name: 'Golduck' },
       { dex: 83, name: 'Farfetch\'d' },
       { dex: 580, name: 'Ducklett' },
@@ -297,13 +300,13 @@
     dumbooctopus: { label: 'Dumbo Octopus', dex: 224, name: 'Octillery', alts: [
       { dex: 223, name: 'Remoraid' },
     ] },
-    elephant:     { label: 'Elephant',      dex: 232, name: 'Donphan', alts: [
+    elephant:     { label: 'Elephant',     dex: 232, name: 'Donphan', alts: [
       { dex: 231, name: 'Phanpy' },
     ] },
-    ferret:       { label: 'Ferret',        dex: 162, name: 'Furret', alts: [
+    ferret:       { label: 'Ferret',       dex: 162, name: 'Furret', alts: [
       { dex: 161, name: 'Sentret' },
     ] },
-    fox:          { label: 'Fox',           dex: 37, name: 'Vulpix', alts: [
+    fox:          { label: 'Fox',          dex: 37, name: 'Vulpix', alts: [
       { dex: 38, name: 'Ninetales' },
       { dex: 37, name: 'Alolan Vulpix', sprite: '37-alola' },
       { dex: 38, name: 'Alolan Ninetales', sprite: '38-alola' },
@@ -315,7 +318,7 @@
       { dex: 570, name: 'Hisuian Zorua', sprite: '570-hisui' },
       { dex: 571, name: 'Hisuian Zoroark', sprite: '571-hisui' },
     ] },
-    frog:         { label: 'Frog',          dex: 656, name: 'Froakie', wink: true, alts: [
+    frog:         { label: 'Frog',         dex: 656, name: 'Froakie', wink: true, alts: [
       { dex: 657, name: 'Frogadier' },
       { dex: 658, name: 'Greninja' },
       { dex: 60, name: 'Poliwag' },
@@ -328,25 +331,27 @@
       { dex: 536, name: 'Palpitoad' },
       { dex: 537, name: 'Seismitoad' },
     ] },
-    giraffe:      { label: 'Giraffe',       dex: 981, name: 'Farigiraf', alts: [
+    giraffe:      { label: 'Giraffe',      dex: 981, name: 'Farigiraf', alts: [
       { dex: 203, name: 'Girafarig' },
     ] },
-    goose:        { label: 'Goose',         dex: 914, name: 'Quaquaval', alts: [
+    goose:        { label: 'Goose',        dex: 914, name: 'Quaquaval', alts: [
       { dex: 912, name: 'Quaxly' },
       { dex: 913, name: 'Quaxwell' },
+      { dex: 580, name: 'Ducklett' },
+      { dex: 581, name: 'Swanna' },
     ] },
-    gopher:       { label: 'Gopher',        dex: 50, name: 'Diglett', alts: [
+    gopher:       { label: 'Gopher',       dex: 50, name: 'Diglett', alts: [
       { dex: 51, name: 'Dugtrio' },
       { dex: 51, name: 'Alolan Dugtrio', sprite: '51-alola' },
     ] },
-    grizzly:      { label: 'Grizzly',       dex: 217, name: 'Ursaring', alts: [
+    grizzly:      { label: 'Grizzly',      dex: 217, name: 'Ursaring', alts: [
       { dex: 901, name: 'Ursaluna' },
       { dex: 216, name: 'Teddiursa' },
       { dex: 901, name: 'Bloodmoon Ursaluna', sprite: '901-bloodmoon' },
       { dex: 613, name: 'Cubchoo' },
       { dex: 614, name: 'Beartic' },
     ] },
-    hamster:      { label: 'Hamster',       dex: 25,  name: 'Pikachu', wink: true, alts: [
+    hamster:      { label: 'Hamster',      dex: 25, name: 'Pikachu', wink: true, alts: [
       // Pikachu forms from the Shuffle sheet: preview in sheets/pikachu-forms.png, delete any you don't want.
       { dex: 25, name: 'Pikachu', sprite: '25-f01' },
       { dex: 25, name: 'Pikachu', sprite: '25-f02' },
@@ -391,61 +396,61 @@
       { dex: 26, name: 'Raichu', wink: true },
       { dex: 26, name: 'Alolan Raichu', sprite: '26-alola' },
     ] },
-    hedgehog:     { label: 'Hedgehog',      dex: 650, name: 'Chespin', wink: true, alts: [
+    hedgehog:     { label: 'Hedgehog',     dex: 650, name: 'Chespin', wink: true, alts: [
       { dex: 651, name: 'Quilladin' },
       { dex: 652, name: 'Chesnaught' },
       { dex: 492, name: 'Shaymin' },
       { dex: 492, name: 'Shaymin', sprite: '492-sky' },
     ] },
-    hippo:        { label: 'Hippo',         dex: 449, name: 'Hippopotas', alts: [
+    hippo:        { label: 'Hippo',        dex: 449, name: 'Hippopotas', alts: [
       { dex: 450, name: 'Hippowdon' },
     ] },
-    hyena:        { label: 'Hyena',         dex: 262, name: 'Mightyena', alts: [
+    hyena:        { label: 'Hyena',        dex: 262, name: 'Mightyena', alts: [
       { dex: 261, name: 'Poochyena' },
     ] },
-    ibex:         { label: 'Ibex',          dex: 673, name: 'Gogoat' },
-    ifrit:        { label: 'Ifrit',         dex: 720, name: 'Hoopa Unbound', alts: [
+    ibex:         { label: 'Ibex',         dex: 673, name: 'Gogoat' },
+    ifrit:        { label: 'Ifrit',        dex: 720, name: 'Hoopa Unbound', alts: [
       { dex: 720, name: 'Hoopa', sprite: '720-confined' },
     ] },
-    iguana:       { label: 'Iguana',        dex: 695, name: 'Heliolisk', alts: [
+    iguana:       { label: 'Iguana',       dex: 695, name: 'Heliolisk', alts: [
       { dex: 694, name: 'Helioptile' },
     ] },
-    jackal:       { label: 'Jackal',        dex: 448, name: 'Lucario', alts: [
+    jackal:       { label: 'Jackal',       dex: 448, name: 'Lucario', alts: [
       { dex: 447, name: 'Riolu' },
     ] },
-    jackalope:    { label: 'Jackalope',     dex: 660, name: 'Diggersby' },
-    kangaroo:     { label: 'Kangaroo',      dex: 115, name: 'Kangaskhan' },
-    kiwi:         { label: 'Kiwi',          dex: 177, name: 'Natu', alts: [
+    jackalope:    { label: 'Jackalope',    dex: 660, name: 'Diggersby' },
+    kangaroo:     { label: 'Kangaroo',     dex: 115, name: 'Kangaskhan' },
+    kiwi:         { label: 'Kiwi',         dex: 177, name: 'Natu', alts: [
       { dex: 178, name: 'Xatu' },
       { dex: 741, name: 'Oricorio' },
       { dex: 741, name: 'Oricorio', sprite: '741-pompom' },
       { dex: 741, name: 'Oricorio', sprite: '741-pau' },
       { dex: 741, name: 'Oricorio', sprite: '741-sensu' },
     ] },
-    koala:        { label: 'Koala',         dex: 775, name: 'Komala' },
-    kraken:       { label: 'Kraken',        dex: 73, name: 'Tentacruel', alts: [
+    koala:        { label: 'Koala',        dex: 775, name: 'Komala' },
+    kraken:       { label: 'Kraken',       dex: 73, name: 'Tentacruel', alts: [
       { dex: 72, name: 'Tentacool' },
       { dex: 130, name: 'Gyarados' },
       { dex: 130, name: 'Gyarados', sprite: '130-red' },
     ] },
-    lemur:        { label: 'Lemur',         dex: 190, name: 'Aipom', alts: [
+    lemur:        { label: 'Lemur',        dex: 190, name: 'Aipom', alts: [
       { dex: 424, name: 'Ambipom' },
     ] },
-    leopard:      { label: 'Leopard',       dex: 510, name: 'Liepard', alts: [
+    leopard:      { label: 'Leopard',      dex: 510, name: 'Liepard', alts: [
       { dex: 509, name: 'Purrloin' },
     ] },
-    liger:        { label: 'Liger',         dex: 667, name: 'Litleo', alts: [
+    liger:        { label: 'Liger',        dex: 667, name: 'Litleo', alts: [
       { dex: 668, name: 'Pyroar' },
       { dex: 668, name: 'Pyroar', sprite: '668-f' },
     ] },
-    llama:        { label: 'Llama',         dex: 749, name: 'Mudbray', alts: [
+    llama:        { label: 'Llama',        dex: 749, name: 'Mudbray', alts: [
       { dex: 750, name: 'Mudsdale' },
     ] },
-    manatee:      { label: 'Manatee',       dex: 131, name: 'Lapras' },
-    mink:         { label: 'Mink',          dex: 418, name: 'Buizel', alts: [
+    manatee:      { label: 'Manatee',      dex: 131, name: 'Lapras' },
+    mink:         { label: 'Mink',         dex: 418, name: 'Buizel', alts: [
       { dex: 419, name: 'Floatzel' },
     ] },
-    monkey:       { label: 'Monkey',        dex: 56, name: 'Mankey', alts: [
+    monkey:       { label: 'Monkey',       dex: 56, name: 'Mankey', alts: [
       { dex: 57, name: 'Primeape' },
       { dex: 979, name: 'Annihilape' },
       { dex: 390, name: 'Chimchar', wink: true },
@@ -459,13 +464,17 @@
       { dex: 516, name: 'Simipour' },
       { dex: 945, name: 'Grafaiai' },
     ] },
-    moose:        { label: 'Moose',         dex: 899, name: 'Wyrdeer', alts: [
+    moose:        { label: 'Moose',        dex: 899, name: 'Wyrdeer', alts: [
       { dex: 234, name: 'Stantler' },
     ] },
-    narwhal:      { label: 'Narwhal',       dex: 975, name: 'Cetitan', alts: [
+    narwhal:      { label: 'Narwhal',      dex: 975, name: 'Cetitan', alts: [
       { dex: 974, name: 'Cetoddle' },
+      { dex: 86, name: 'Seel' },
+      { dex: 87, name: 'Dewgong' },
+      { dex: 728, name: 'Popplio' },
+      { dex: 730, name: 'Primarina' },
     ] },
-    nyancat:      { label: 'Nyan Cat',      dex: 52, name: 'Meowth', alts: [
+    nyancat:      { label: 'Nyan Cat',     dex: 52, name: 'Meowth', alts: [
       { dex: 52, name: 'Alolan Meowth', sprite: '52-alola' },
       { dex: 300, name: 'Skitty' },
       { dex: 301, name: 'Delcatty' },
@@ -478,75 +487,78 @@
       { dex: 907, name: 'Floragato' },
       { dex: 908, name: 'Meowscarada' },
     ] },
-    orangutan:    { label: 'Orangutan',     dex: 765, name: 'Oranguru', alts: [
+    orangutan:    { label: 'Orangutan',    dex: 765, name: 'Oranguru', alts: [
       { dex: 766, name: 'Passimian' },
     ] },
-    otter:        { label: 'Otter',         dex: 501, name: 'Oshawott', wink: true, alts: [
+    otter:        { label: 'Otter',        dex: 501, name: 'Oshawott', wink: true, alts: [
       { dex: 502, name: 'Dewott' },
       { dex: 503, name: 'Samurott' },
       { dex: 503, name: 'Hisuian Samurott', sprite: '503-hisui' },
     ] },
-    panda:        { label: 'Panda',         dex: 674, name: 'Pancham', alts: [
+    panda:        { label: 'Panda',        dex: 674, name: 'Pancham', alts: [
       { dex: 675, name: 'Pangoro' },
     ] },
-    penguin:      { label: 'Penguin',       dex: 393, name: 'Piplup', wink: true, alts: [
+    penguin:      { label: 'Penguin',      dex: 393, name: 'Piplup', wink: true, alts: [
       { dex: 394, name: 'Prinplup' },
       { dex: 395, name: 'Empoleon' },
     ] },
-    platypus:     { label: 'Platypus',      dex: 54, name: 'Psyduck', alts: [
+    platypus:     { label: 'Platypus',     dex: 54, name: 'Psyduck', alts: [
       { dex: 55, name: 'Golduck' },
     ] },
-    pumpkin:      { label: 'Pumpkin',       dex: 710, name: 'Pumpkaboo', alts: [
+    pumpkin:      { label: 'Pumpkin',      dex: 710, name: 'Pumpkaboo', alts: [
       { dex: 711, name: 'Gourgeist' },
     ] },
-    python:       { label: 'Python',        dex: 23, name: 'Ekans', alts: [
+    python:       { label: 'Python',       dex: 23, name: 'Ekans', alts: [
       { dex: 24, name: 'Arbok' },
       { dex: 336, name: 'Seviper' },
       { dex: 495, name: 'Snivy', wink: true },
       { dex: 496, name: 'Servine' },
       { dex: 497, name: 'Serperior' },
     ] },
-    quagga:       { label: 'Quagga',        dex: 523, name: 'Zebstrika', alts: [
+    quagga:       { label: 'Quagga',       dex: 523, name: 'Zebstrika', alts: [
       { dex: 522, name: 'Blitzle' },
     ] },
-    quokka:       { label: 'Quokka',        dex: 877, name: 'Morpeko' },
-    rabbit:       { label: 'Rabbit',        dex: 427, name: 'Buneary', alts: [
+    quokka:       { label: 'Quokka',       dex: 877, name: 'Morpeko', alts: [
+      { dex: 702, name: 'Dedenne', wink: true },
+      { dex: 777, name: 'Togedemaru' },
+    ] },
+    rabbit:       { label: 'Rabbit',       dex: 427, name: 'Buneary', alts: [
       { dex: 428, name: 'Lopunny' },
       { dex: 814, name: 'Raboot' },
     ] },
-    raccoon:      { label: 'Raccoon',       dex: 263, name: 'Zigzagoon', alts: [
+    raccoon:      { label: 'Raccoon',      dex: 263, name: 'Zigzagoon', alts: [
       { dex: 264, name: 'Linoone' },
     ] },
-    rhino:        { label: 'Rhino',         dex: 111, name: 'Rhyhorn', alts: [
+    rhino:        { label: 'Rhino',        dex: 111, name: 'Rhyhorn', alts: [
       { dex: 112, name: 'Rhydon' },
       { dex: 464, name: 'Rhyperior' },
     ] },
-    sheep:        { label: 'Sheep',         dex: 179, name: 'Mareep', alts: [
+    sheep:        { label: 'Sheep',        dex: 179, name: 'Mareep', alts: [
       { dex: 180, name: 'Flaaffy' },
       { dex: 181, name: 'Ampharos' },
     ] },
-    shrew:        { label: 'Shrew',         dex: 27, name: 'Sandshrew', alts: [
+    shrew:        { label: 'Shrew',        dex: 27, name: 'Sandshrew', alts: [
       { dex: 27, name: 'Alolan Sandshrew', sprite: '27-alola' },
       { dex: 19, name: 'Rattata' },
       { dex: 20, name: 'Raticate' },
       { dex: 19, name: 'Alolan Rattata', sprite: '19-alola' },
       { dex: 20, name: 'Alolan Raticate', sprite: '20-alola' },
     ] },
-    skunk:        { label: 'Skunk',         dex: 434, name: 'Stunky', alts: [
+    skunk:        { label: 'Skunk',        dex: 434, name: 'Stunky', alts: [
       { dex: 435, name: 'Skuntank' },
     ] },
-    slowloris:    { label: 'Slow Loris',    dex: 79, name: 'Slowpoke', alts: [
+    slowloris:    { label: 'Slow Loris',   dex: 79, name: 'Slowpoke', alts: [
       { dex: 80, name: 'Slowbro' },
       { dex: 80, name: 'Galarian Slowbro', sprite: '80-galar' },
       { dex: 199, name: 'Slowking' },
     ] },
-    squirrel:     { label: 'Squirrel',      dex: 587, name: 'Emolga' },
-    tiger:        { label: 'Tiger',         dex: 243, name: 'Raikou', alts: [
+    squirrel:     { label: 'Squirrel',     dex: 587, name: 'Emolga' },
+    tiger:        { label: 'Tiger',        dex: 243, name: 'Raikou', alts: [
       { dex: 725, name: 'Litten' },
       { dex: 726, name: 'Torracat' },
       { dex: 727, name: 'Incineroar' },
     ] },
-    turtle:       { label: 'Turtle',        dex: 7, name: 'Squirtle', wink: true, alts: [
+    turtle:       { label: 'Turtle',       dex: 7, name: 'Squirtle', wink: true, alts: [
       { dex: 8, name: 'Wartortle' },
       { dex: 9, name: 'Blastoise' },
       { dex: 387, name: 'Turtwig', wink: true },
@@ -555,14 +567,14 @@
       { dex: 564, name: 'Tirtouga' },
       { dex: 565, name: 'Carracosta' },
     ] },
-    unicorn:      { label: 'Unicorn',       dex: 78, name: 'Rapidash', alts: [
+    unicorn:      { label: 'Unicorn',      dex: 78, name: 'Rapidash', alts: [
       { dex: 77, name: 'Ponyta' },
     ] },
-    walrus:       { label: 'Walrus',        dex: 365, name: 'Walrein', alts: [
+    walrus:       { label: 'Walrus',       dex: 365, name: 'Walrein', alts: [
       { dex: 363, name: 'Spheal' },
       { dex: 364, name: 'Sealeo' },
     ] },
-    wolf:         { label: 'Wolf',          dex: 745, name: 'Lycanroc', alts: [
+    wolf:         { label: 'Wolf',         dex: 745, name: 'Lycanroc', alts: [
       { dex: 261, name: 'Poochyena' },
       { dex: 262, name: 'Mightyena' },
       { dex: 570, name: 'Zorua' },
@@ -570,33 +582,40 @@
       { dex: 570, name: 'Hisuian Zorua', sprite: '570-hisui' },
       { dex: 571, name: 'Hisuian Zoroark', sprite: '571-hisui' },
     ] },
-    wolverine:    { label: 'Wolverine',     dex: 215, name: 'Sneasel', alts: [
+    wolverine:    { label: 'Wolverine',    dex: 215, name: 'Sneasel', alts: [
       { dex: 461, name: 'Weavile' },
       { dex: 215, name: 'Hisuian Sneasel', sprite: '215-hisui' },
       { dex: 903, name: 'Sneasler' },
     ] },
-    wombat:       { label: 'Wombat',        dex: 446, name: 'Munchlax', alts: [
+    wombat:       { label: 'Wombat',       dex: 446, name: 'Munchlax', alts: [
       { dex: 143, name: 'Snorlax' },
     ] },
+
     // Retired from the current pool, kept in case old sessions still show them.
-    bear:         { label: 'Bear',          dex: 216, name: 'Teddiursa' },
-    dog:          { label: 'Dog',           dex: 926, name: 'Fidough' },
-    lion:         { label: 'Lion',          dex: 668, name: 'Pyroar' },
+    bear:         { label: 'Bear',         dex: 216, name: 'Teddiursa' },
+    dog:          { label: 'Dog',          dex: 926, name: 'Fidough', alts: [
+      { dex: 58, name: 'Growlithe' },
+    ] },
+    lion:         { label: 'Lion',         dex: 668, name: 'Pyroar' },
 
     // 2019 Endangered Species Day additions (names only; not on the gstatic CDN).
-    africanwilddog:    { label: 'African Wild Dog',        dex: 942, name: 'Maschiff' },
-    bluewhale:         { label: 'Blue Whale',              dex: 974, name: 'Cetoddle' },
-    desertelephant:    { label: 'Desert-Dwelling Elephant', dex: 231, name: 'Phanpy' },
-    fossa:             { label: 'Fossa',                   dex: 509, name: 'Purrloin' },
-    greyreefshark:     { label: 'Grey Reef Shark',         dex: 319, name: 'Sharpedo' },
-    sumatranorangutan: { label: 'Sumatran Orangutan',      dex: 766, name: 'Passimian' },
-    bluefintuna:       { label: 'Pacific Bluefin Tuna',    dex: 550, name: 'Basculin' },
-    kingpenguin:       { label: 'King Penguin',            dex: 395, name: 'Empoleon' },
-    polarbear:         { label: 'Polar Bear',              dex: 614, name: 'Beartic' },
-    siberiantiger:     { label: 'Siberian Tiger',          dex: 727, name: 'Incineroar' },
+    africanwilddog: { label: 'African Wild Dog', dex: 942, name: 'Maschiff', alts: [
+      { dex: 228, name: 'Houndour' },
+    ] },
+    bluewhale:    { label: 'Blue Whale',   dex: 974, name: 'Cetoddle', alts: [
+      { dex: 321, name: 'Wailord' },
+    ] },
+    desertelephant: { label: 'Desert-Dwelling Elephant', dex: 231, name: 'Phanpy' },
+    fossa:        { label: 'Fossa',        dex: 509, name: 'Purrloin' },
+    greyreefshark: { label: 'Grey Reef Shark', dex: 319, name: 'Sharpedo' },
+    sumatranorangutan: { label: 'Sumatran Orangutan', dex: 766, name: 'Passimian' },
+    bluefintuna:  { label: 'Pacific Bluefin Tuna', dex: 550, name: 'Basculin' },
+    kingpenguin:  { label: 'King Penguin', dex: 395, name: 'Empoleon' },
+    polarbear:    { label: 'Polar Bear',   dex: 614, name: 'Beartic' },
+    siberiantiger: { label: 'Siberian Tiger', dex: 727, name: 'Incineroar' },
 
     // Not in Google's pool; here in case it's ever added.
-    flamingo:          { label: 'Flamingo',                dex: 973, name: 'Flamigo' },
+    flamingo:     { label: 'Flamingo',     dex: 973, name: 'Flamigo' },
   };
 
   // Primary type per sprite id (forms use their own typing). From PokeAPI.
@@ -608,48 +627,49 @@
     52: 'normal', '52-alola': 'dark', 53: 'normal', '53-alola': 'dark', 54: 'water', 55: 'water',
     56: 'fighting', 57: 'fighting', 58: 'fire', 59: 'fire', 60: 'water', 61: 'water',
     62: 'water', 72: 'water', 73: 'water', 77: 'fire', 78: 'fire', 79: 'water',
-    80: 'water', '80-galar': 'poison', 83: 'normal', 111: 'ground', 112: 'ground', 115: 'normal',
-    128: 'normal', '128-paldea': 'fighting', '128-paldea-aqua': 'fighting', '128-paldea-blaze': 'fighting', 130: 'water', 131: 'water',
-    132: 'normal', 143: 'normal', 147: 'dragon', 148: 'dragon', 149: 'dragon', 158: 'water',
-    159: 'water', 160: 'water', 161: 'normal', 162: 'normal', 169: 'poison', 172: 'electric',
-    177: 'psychic', 178: 'psychic', 179: 'electric', 180: 'electric', 181: 'electric', 186: 'water',
-    190: 'normal', 194: 'water', '194-paldea': 'poison', 195: 'water', 198: 'dark', 199: 'water',
-    203: 'normal', 209: 'fairy', 210: 'fairy', 215: 'dark', '215-hisui': 'fighting', 216: 'normal',
-    217: 'normal', 223: 'water', 224: 'water', 228: 'dark', 229: 'dark', 231: 'ground',
-    232: 'ground', 234: 'normal', 243: 'electric', 255: 'fire', 256: 'fire', 257: 'fire',
-    258: 'water', 259: 'water', 260: 'water', 261: 'dark', 262: 'dark', 263: 'normal',
-    264: 'normal', 278: 'water', 279: 'water', 300: 'normal', 301: 'normal', 302: 'dark',
-    309: 'electric', 310: 'electric', 319: 'water', 322: 'fire', 323: 'fire', 336: 'poison',
-    352: 'normal', 363: 'ice', 364: 'ice', 365: 'ice', 371: 'dragon', 372: 'dragon',
-    373: 'dragon', 384: 'dragon', 387: 'grass', 388: 'grass', 389: 'grass', 390: 'fire',
-    391: 'fire', 392: 'fire', 393: 'water', 394: 'water', 395: 'water', 399: 'normal',
-    400: 'normal', 417: 'electric', 418: 'water', 419: 'water', 424: 'normal', 427: 'normal',
-    428: 'normal', 430: 'dark', 431: 'normal', 432: 'normal', 434: 'poison', 435: 'poison',
-    443: 'dragon', 444: 'dragon', 445: 'dragon', 446: 'normal', 447: 'fighting', 448: 'fighting',
-    449: 'ground', 450: 'ground', 453: 'poison', 454: 'poison', 461: 'dark', 464: 'ground',
-    483: 'steel', 484: 'water', 492: 'grass', 495: 'grass', 496: 'grass', 497: 'grass',
-    501: 'water', 502: 'water', 503: 'water', 506: 'normal', 507: 'normal', 508: 'normal',
-    509: 'dark', 510: 'dark', 511: 'grass', 512: 'grass', 513: 'fire', 514: 'fire',
-    515: 'water', 516: 'water', 522: 'electric', 523: 'electric', 527: 'psychic', 528: 'psychic',
-    535: 'water', 536: 'water', 537: 'water', 550: 'water', 551: 'ground', 552: 'ground',
-    553: 'ground', 564: 'water', 565: 'water', 570: 'dark', '570-hisui': 'normal', 571: 'dark',
-    '571-hisui': 'normal', 572: 'normal', 573: 'normal', 580: 'water', 581: 'water', 587: 'electric',
-    610: 'dragon', 611: 'dragon', 612: 'dragon', 613: 'ice', 614: 'ice', 621: 'dragon',
-    626: 'normal', 631: 'fire', 633: 'dark', 634: 'dark', 635: 'dark', 643: 'dragon',
-    644: 'dragon', 646: 'dragon', 650: 'grass', 651: 'grass', 652: 'grass', 653: 'fire',
-    654: 'fire', 655: 'fire', 656: 'water', 657: 'water', 658: 'water', 660: 'normal',
-    667: 'fire', 668: 'fire', 673: 'grass', 674: 'fighting', 675: 'fighting', 676: 'normal',
-    677: 'psychic', 678: 'psychic', 694: 'electric', 695: 'electric', 696: 'rock', 697: 'rock',
-    698: 'rock', 699: 'rock', 710: 'ghost', 711: 'ghost', 714: 'flying', 715: 'flying',
-    720: 'psychic', 725: 'fire', 726: 'fire', 727: 'fire', 741: 'fire', '741-pau': 'psychic',
-    '741-pompom': 'electric', '741-sensu': 'ghost', 744: 'rock', 745: 'rock', 749: 'ground', 750: 'ground',
-    765: 'normal', 766: 'fighting', 775: 'normal', 814: 'fire', 821: 'flying', 822: 'flying',
-    823: 'flying', 877: 'electric', 899: 'normal', 901: 'ground', 903: 'fighting', 906: 'grass',
-    907: 'grass', 908: 'grass', 912: 'water', 913: 'water', 914: 'water', 926: 'fairy',
-    927: 'fairy', 942: 'dark', 943: 'dark', 945: 'poison', 963: 'water', 964: 'water',
-    967: 'dragon', 971: 'ghost', 972: 'ghost', 973: 'flying', 974: 'ice', 975: 'ice',
-    979: 'fighting', 980: 'poison', 981: 'normal', 996: 'dragon', 997: 'dragon', 998: 'dragon',
-    1007: 'fighting', 1008: 'electric',
+    80: 'water', '80-galar': 'poison', 83: 'normal', 86: 'water', 87: 'water', 111: 'ground',
+    112: 'ground', 115: 'normal', 128: 'normal', '128-paldea': 'fighting', '128-paldea-aqua': 'fighting', '128-paldea-blaze': 'fighting',
+    130: 'water', 131: 'water', 132: 'normal', 143: 'normal', 147: 'dragon', 148: 'dragon',
+    149: 'dragon', 158: 'water', 159: 'water', 160: 'water', 161: 'normal', 162: 'normal',
+    169: 'poison', 172: 'electric', 177: 'psychic', 178: 'psychic', 179: 'electric', 180: 'electric',
+    181: 'electric', 186: 'water', 190: 'normal', 194: 'water', '194-paldea': 'poison', 195: 'water',
+    198: 'dark', 199: 'water', 203: 'normal', 209: 'fairy', 210: 'fairy', 215: 'dark',
+    '215-hisui': 'fighting', 216: 'normal', 217: 'normal', 223: 'water', 224: 'water', 228: 'dark',
+    229: 'dark', 231: 'ground', 232: 'ground', 234: 'normal', 243: 'electric', 255: 'fire',
+    256: 'fire', 257: 'fire', 258: 'water', 259: 'water', 260: 'water', 261: 'dark',
+    262: 'dark', 263: 'normal', 264: 'normal', 278: 'water', 279: 'water', 300: 'normal',
+    301: 'normal', 302: 'dark', 309: 'electric', 310: 'electric', 319: 'water', 320: 'water',
+    321: 'water', 322: 'fire', 323: 'fire', 336: 'poison', 352: 'normal', 363: 'ice',
+    364: 'ice', 365: 'ice', 371: 'dragon', 372: 'dragon', 373: 'dragon', 384: 'dragon',
+    387: 'grass', 388: 'grass', 389: 'grass', 390: 'fire', 391: 'fire', 392: 'fire',
+    393: 'water', 394: 'water', 395: 'water', 399: 'normal', 400: 'normal', 417: 'electric',
+    418: 'water', 419: 'water', 424: 'normal', 427: 'normal', 428: 'normal', 430: 'dark',
+    431: 'normal', 432: 'normal', 434: 'poison', 435: 'poison', 443: 'dragon', 444: 'dragon',
+    445: 'dragon', 446: 'normal', 447: 'fighting', 448: 'fighting', 449: 'ground', 450: 'ground',
+    453: 'poison', 454: 'poison', 461: 'dark', 464: 'ground', 483: 'steel', 484: 'water',
+    492: 'grass', 495: 'grass', 496: 'grass', 497: 'grass', 501: 'water', 502: 'water',
+    503: 'water', 506: 'normal', 507: 'normal', 508: 'normal', 509: 'dark', 510: 'dark',
+    511: 'grass', 512: 'grass', 513: 'fire', 514: 'fire', 515: 'water', 516: 'water',
+    522: 'electric', 523: 'electric', 527: 'psychic', 528: 'psychic', 535: 'water', 536: 'water',
+    537: 'water', 550: 'water', 551: 'ground', 552: 'ground', 553: 'ground', 564: 'water',
+    565: 'water', 570: 'dark', '570-hisui': 'normal', 571: 'dark', '571-hisui': 'normal', 572: 'normal',
+    573: 'normal', 580: 'water', 581: 'water', 587: 'electric', 610: 'dragon', 611: 'dragon',
+    612: 'dragon', 613: 'ice', 614: 'ice', 621: 'dragon', 626: 'normal', 631: 'fire',
+    633: 'dark', 634: 'dark', 635: 'dark', 643: 'dragon', 644: 'dragon', 646: 'dragon',
+    650: 'grass', 651: 'grass', 652: 'grass', 653: 'fire', 654: 'fire', 655: 'fire',
+    656: 'water', 657: 'water', 658: 'water', 660: 'normal', 667: 'fire', 668: 'fire',
+    673: 'grass', 674: 'fighting', 675: 'fighting', 676: 'normal', 677: 'psychic', 678: 'psychic',
+    694: 'electric', 695: 'electric', 696: 'rock', 697: 'rock', 698: 'rock', 699: 'rock',
+    702: 'electric', 710: 'ghost', 711: 'ghost', 714: 'flying', 715: 'flying', 720: 'psychic',
+    725: 'fire', 726: 'fire', 727: 'fire', 728: 'water', 729: 'water', 730: 'water',
+    741: 'fire', '741-pau': 'psychic', '741-pompom': 'electric', '741-sensu': 'ghost', 744: 'rock', 745: 'rock',
+    749: 'ground', 750: 'ground', 765: 'normal', 766: 'fighting', 775: 'normal', 777: 'electric',
+    814: 'fire', 821: 'flying', 822: 'flying', 823: 'flying', 877: 'electric', 899: 'normal',
+    901: 'ground', 903: 'fighting', 906: 'grass', 907: 'grass', 908: 'grass', 912: 'water',
+    913: 'water', 914: 'water', 926: 'fairy', 927: 'fairy', 942: 'dark', 943: 'dark',
+    945: 'poison', 963: 'water', 964: 'water', 967: 'dragon', 971: 'ghost', 972: 'ghost',
+    973: 'flying', 974: 'ice', 975: 'ice', 979: 'fighting', 980: 'poison', 981: 'normal',
+    996: 'dragon', 997: 'dragon', 998: 'dragon', 1007: 'fighting', 1008: 'electric',
   };
 
   const TYPE_COLORS = {
