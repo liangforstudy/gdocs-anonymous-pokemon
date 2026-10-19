@@ -195,7 +195,7 @@ Don't like a pick? Change the `dex` and `name` for that animal in `ANIMALS` in t
 
 ## AI Usage
 
-I did most of the cherry Picking for the sprites, claude did the code, as well as the Deviantart fetch system. it will be inpossible to make the code without Claude.
+I did most of the cherry Picking for the sprites, claude did the code. it will be inpossible to make the code without Claude.
 
 ## Disclaimer
 
