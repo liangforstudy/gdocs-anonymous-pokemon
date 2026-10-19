@@ -65,15 +65,15 @@ If a sheet has gaps or extra forms, pin any Pokémon to a specific cell with `po
 
 | Gen | Count | Pokémon |
 |---|---|---|
-| 1 | 23 | Squirtle ✅ 😉, Rattata ✅, Ekans ✅, Pikachu ✅ 😉, Raichu ✅ 😉, Sandshrew ✅, Sandslash ✅, Vulpix ✅, Zubat ✅, Diglett ✅, Meowth ✅, Persian ✅, Psyduck ✅, Mankey ✅, Tentacruel ✅, Rapidash ✅, Slowpoke ✅, Farfetch'd ✅, Rhyhorn ✅, Kangaskhan ✅, Lapras ✅, Ditto ✅, Dragonite ✅ |
-| 2 | 14 | Feraligatr ✅, Furret ✅, Natu ✅, Mareep ✅, Aipom ✅, Wooper ✅, Murkrow ✅, Sneasel ✅, Teddiursa ✅, Ursaring ✅, Octillery ✅, Phanpy ✅, Donphan ✅, Raikou ✅ |
-| 3 | 11 | Torchic ✅ 😉, Poochyena ✅, Mightyena ✅, Zigzagoon ✅, Linoone ✅, Pelipper ✅, Sableye ✅, Sharpedo ✅, Camerupt ✅, Kecleon ✅, Walrein ✅ |
-| 4 | 12 | Piplup ✅ 😉, Empoleon ✅, Bidoof ✅, Bibarel ✅, Pachirisu ✅ 😉, Buizel ✅, Floatzel ✅, Buneary ✅, Stunky ✅, Munchlax ✅, Lucario ✅, Hippopotas ✅ |
-| 5 | 10 | Oshawott ✅ 😉, Purrloin ✅, Liepard ✅, Zebstrika ✅, Basculin ✅, Minccino ✅, Emolga ✅, Beartic ✅, Bouffalant ✅, Heatmor ✅ |
-| 6 | 11 | Chespin ✅ 😉, Froakie ✅ 😉, Diggersby ✅, Litleo ✅, Pyroar ✅, Gogoat ✅, Pancham ✅, Heliolisk ✅, Tyrantrum ✅, Pumpkaboo ✅, Hoopa ✅ |
-| 7 | 9 | Alolan Rattata ✅, Alolan Raichu ✅, Incineroar ✅, Rockruff ✅, Lycanroc ✅, Mudbray ✅, Oranguru ✅, Passimian ✅, Komala ✅ |
-| 8 | 4 | Rookidee 🌐, Morpeko 🌐, Wyrdeer 🌐, Ursaluna 🌐 |
-| 9 | 13 | Paldean Tauros 🌐, Quaxly 🌐, Quaquaval 🌐, Fidough 🌐, Maschiff 🌐, Finizen 🌐, Palafin 🌐, Flamigo 🌐, Cetoddle 🌐, Cetitan 🌐, Clodsire 🌐, Farigiraf 🌐, Koraidon 🌐 |
+| 1 | 47 | Charizard ✅, Squirtle ✅ 😉, Wartortle ✅, Blastoise ✅, Rattata ✅, Raticate ✅, Ekans ✅, Arbok ✅, Pikachu ✅ 😉, Raichu ✅ 😉, Sandshrew ✅, Sandslash ✅, Vulpix ✅, Ninetales ✅, Zubat ✅, Golbat ✅, Diglett ✅, Dugtrio ✅, Meowth ✅, Persian ✅, Psyduck ✅, Golduck ✅, Mankey ✅, Primeape ✅, Growlithe ✅, Arcanine ✅, Poliwag ✅, Poliwhirl ✅, Poliwrath ✅, Tentacool ✅, Tentacruel ✅, Ponyta ✅, Rapidash ✅, Slowpoke ✅, Slowbro ✅, Farfetch'd ✅, Rhyhorn ✅, Rhydon ✅, Kangaskhan ✅, Tauros ✅, Gyarados ✅, Lapras ✅, Ditto ✅, Snorlax ✅, Dratini ✅, Dragonair ✅, Dragonite ✅ |
+| 2 | 32 | Totodile ✅ 😉, Croconaw ✅, Feraligatr ✅, Sentret ✅, Furret ✅, Crobat ✅, Pichu ✅, Natu ✅, Xatu ✅, Mareep ✅, Flaaffy ✅, Ampharos ✅, Politoed ✅, Aipom ✅, Wooper ✅, Quagsire ✅, Murkrow ✅, Slowking ✅, Girafarig ✅, Snubbull ✅, Granbull ✅, Sneasel ✅, Teddiursa ✅, Ursaring ✅, Remoraid ✅, Octillery ✅, Houndour ✅, Houndoom ✅, Phanpy ✅, Donphan ✅, Stantler ✅, Raikou ✅ |
+| 3 | 30 | Torchic ✅ 😉, Combusken ✅, Blaziken ✅, Mudkip ✅ 😉, Marshtomp ✅, Swampert ✅, Poochyena ✅, Mightyena ✅, Zigzagoon ✅, Linoone ✅, Wingull ✅, Pelipper ✅, Skitty ✅, Delcatty ✅, Sableye ✅, Mega Sableye ✅, Electrike ✅, Manectric ✅, Sharpedo ✅, Numel ✅, Camerupt ✅, Seviper ✅, Kecleon ✅, Spheal ✅, Sealeo ✅, Walrein ✅, Bagon ✅, Shelgon ✅, Salamence ✅, Rayquaza ✅ |
+| 4 | 37 | Turtwig ✅ 😉, Grotle ✅, Torterra ✅, Chimchar ✅ 😉, Monferno ✅, Infernape ✅, Piplup ✅ 😉, Prinplup ✅, Empoleon ✅, Bidoof ✅, Bibarel ✅, Pachirisu ✅ 😉, Buizel ✅, Floatzel ✅, Ambipom ✅, Buneary ✅, Lopunny ✅, Honchkrow ✅, Glameow ✅, Purugly ✅, Stunky ✅, Skuntank ✅, Gible ✅, Gabite ✅, Garchomp ✅, Munchlax ✅, Riolu ✅, Lucario ✅, Hippopotas ✅, Hippowdon ✅, Croagunk ✅, Toxicroak ✅, Weavile ✅, Rhyperior ✅, Dialga ✅, Palkia ✅, Shaymin ✅ |
+| 5 | 51 | Snivy ✅ 😉, Servine ✅, Serperior ✅, Oshawott ✅ 😉, Dewott ✅, Samurott ✅, Lillipup ✅, Herdier ✅, Stoutland ✅, Purrloin ✅, Liepard ✅, Pansage ✅, Simisage ✅, Pansear ✅, Simisear ✅, Panpour ✅, Simipour ✅, Blitzle ✅, Zebstrika ✅, Woobat ✅, Swoobat ✅, Tympole ✅, Palpitoad ✅, Seismitoad ✅, Basculin ✅, Sandile ✅, Krokorok ✅, Krookodile ✅, Tirtouga ✅, Carracosta ✅, Zorua ✅, Zoroark ✅, Minccino ✅, Cinccino ✅, Ducklett ✅, Swanna ✅, Emolga ✅, Axew ✅, Fraxure ✅, Haxorus ✅, Cubchoo ✅, Beartic ✅, Druddigon ✅, Bouffalant ✅, Heatmor ✅, Deino ✅, Zweilous ✅, Hydreigon ✅, Reshiram ✅, Zekrom ✅, Kyurem ✅ |
+| 6 | 29 | Chespin ✅ 😉, Quilladin ✅, Chesnaught ✅, Fennekin ✅ 😉, Braixen ✅, Delphox ✅, Froakie ✅ 😉, Frogadier ✅, Greninja ✅, Diggersby ✅, Litleo ✅, Pyroar ✅, Gogoat ✅, Pancham ✅, Pangoro ✅, Furfrou ✅, Espurr ✅, Meowstic ✅, Helioptile ✅, Heliolisk ✅, Tyrunt ✅, Tyrantrum ✅, Amaura ✅, Aurorus ✅, Pumpkaboo ✅, Gourgeist ✅, Noibat ✅, Noivern ✅, Hoopa ✅ |
+| 7 | 21 | Alolan Rattata ✅, Alolan Raticate ✅, Alolan Raichu ✅, Alolan Sandshrew ✅, Alolan Sandslash ✅, Alolan Vulpix ✅, Alolan Ninetales ✅, Alolan Dugtrio ✅, Alolan Meowth ✅, Alolan Persian ✅, Litten ✅, Torracat ✅, Incineroar ✅, Oricorio ✅, Rockruff ✅, Lycanroc ✅, Mudbray ✅, Mudsdale ✅, Oranguru ✅, Passimian ✅, Komala ✅ |
+| 8 | 16 | Hisuian Growlithe 🌐, Hisuian Arcanine 🌐, Galarian Slowbro 🌐, Hisuian Sneasel 🌐, Hisuian Samurott 🌐, Hisuian Zorua 🌐, Hisuian Zoroark 🌐, Raboot 🌐, Rookidee 🌐, Corvisquire 🌐, Corviknight 🌐, Morpeko 🌐, Wyrdeer 🌐, Ursaluna 🌐, Bloodmoon Ursaluna 🌐, Sneasler 🌐 |
+| 9 | 29 | Paldean Tauros 🌐, Paldean Wooper 🌐, Sprigatito 🌐, Floragato 🌐, Meowscarada 🌐, Quaxly 🌐, Quaxwell 🌐, Quaquaval 🌐, Fidough 🌐, Dachsbun 🌐, Maschiff 🌐, Mabosstiff 🌐, Grafaiai 🌐, Finizen 🌐, Palafin 🌐, Cyclizar 🌐, Greavard 🌐, Houndstone 🌐, Flamigo 🌐, Cetoddle 🌐, Cetitan 🌐, Annihilape 🌐, Clodsire 🌐, Farigiraf 🌐, Frigibax 🌐, Arctibax 🌐, Baxcalibur 🌐, Koraidon 🌐, Miraidon 🌐 |
 
 ## Animal → Pokémon map
 
@@ -83,88 +83,88 @@ Where an animal lists more than one Pokémon, one is picked at random for that a
 
 | Anonymous… | Pokémon | Gen |
 |---|---|---|
-| Alligator | Feraligatr #160 | 2 |
+| Alligator | Feraligatr #160 / Totodile #158 😉 / Croconaw #159 / Sandile #551 / Krokorok #552 / Krookodile #553 | 2 / 5 |
 | Anteater | Heatmor #631 | 5 |
-| Armadillo | Sandslash #28 | 1 |
-| Auroch | Paldean Tauros #128 | 9 |
-| Axolotl | Wooper #194 | 2 |
-| Badger | Linoone #264 | 3 |
-| Bat | Zubat #41 | 1 |
-| Beaver | Bidoof #399 | 4 |
+| Armadillo | Sandslash #28 / Alolan Sandslash #28 | 1 / 7 |
+| Auroch | Paldean Tauros #128 / Tauros #128 (+2 Pikachu forms) | 9 / 1 |
+| Axolotl | Wooper #194 / Quagsire #195 / Paldean Wooper #194 / Mudkip #258 😉 / Marshtomp #259 / Swampert #260 | 2 / 9 / 3 |
+| Badger | Linoone #264 / Zigzagoon #263 | 3 |
+| Bat | Zubat #41 / Golbat #42 / Crobat #169 / Woobat #527 / Swoobat #528 / Noibat #714 / Noivern #715 | 1 / 2 / 5 / 6 |
+| Beaver | Bidoof #399 / Bibarel #400 | 4 |
 | Blobfish | Ditto #132 | 1 |
 | Buffalo | Bouffalant #626 | 5 |
-| Camel | Camerupt #323 | 3 |
+| Camel | Camerupt #323 / Numel #322 | 3 |
 | Capybara | Clodsire #980 / Bidoof #399 / Bibarel #400 | 9 / 4 |
 | Chameleon | Kecleon #352 | 3 |
-| Cheetah | Persian #53 | 1 |
-| Chicken | Torchic #255 😉 | 3 |
-| Chinchilla | Minccino #572 | 5 |
+| Cheetah | Persian #53 / Alolan Persian #53 | 1 / 7 |
+| Chicken | Torchic #255 😉 / Combusken #256 / Blaziken #257 | 3 |
+| Chinchilla | Minccino #572 / Cinccino #573 | 5 |
 | Chipmunk | Pachirisu #417 😉 | 4 |
-| Chupacabra | Sableye #302 | 3 |
-| Cormorant | Pelipper #279 | 3 |
-| Coyote | Poochyena #261 | 3 |
-| Crow | Murkrow #198 / Rookidee #821 | 2 / 8 |
-| Dingo | Rockruff #744 | 7 |
-| Dinosaur | Tyrantrum #697 / Koraidon #1007 | 6 / 9 |
-| Dolphin | Finizen #963 / Palafin #964 | 9 |
-| Dragon | Dragonite #149 | 1 |
-| Duck | Psyduck #54 / Quaxly #912 | 1 / 9 |
-| Dumbo Octopus | Octillery #224 | 2 |
-| Elephant | Donphan #232 | 2 |
-| Ferret | Furret #162 | 2 |
-| Fox | Vulpix #37 | 1 |
-| Frog | Froakie #656 😉 | 6 |
-| Giraffe | Farigiraf #981 | 9 |
-| Goose | Quaquaval #914 | 9 |
-| Gopher | Diglett #50 | 1 |
-| Grizzly | Ursaring #217 / Ursaluna #901 | 2 / 8 |
-| Hamster | Pikachu #25 😉 / Raichu #26 😉 / Alolan Raichu #26 (+39 Pikachu forms) | 1 / 7 |
-| Hedgehog | Chespin #650 😉 | 6 |
-| Hippo | Hippopotas #449 | 4 |
-| Hyena | Mightyena #262 | 3 |
+| Chupacabra | Sableye #302 / Mega Sableye #302 | 3 |
+| Cormorant | Pelipper #279 / Wingull #278 | 3 |
+| Coyote | Poochyena #261 / Mightyena #262 | 3 |
+| Crow | Murkrow #198 / Honchkrow #430 / Rookidee #821 / Corvisquire #822 / Corviknight #823 | 2 / 4 / 8 |
+| Dingo | Rockruff #744 / Growlithe #58 / Arcanine #59 / Hisuian Growlithe #58 / Hisuian Arcanine #59 / Houndour #228 / Houndoom #229 / Snubbull #209 / Granbull #210 / Electrike #309 / Manectric #310 / Lillipup #506 / Herdier #507 / Stoutland #508 / Furfrou #676 / Fidough #926 / Dachsbun #927 / Maschiff #942 / Mabosstiff #943 / Greavard #971 / Houndstone #972 | 7 / 1 / 8 / 2 / 3 / 5 / 6 / 9 |
+| Dinosaur | Tyrantrum #697 / Tyrunt #696 / Amaura #698 / Aurorus #699 / Koraidon #1007 / Cyclizar #967 / Miraidon #1008 | 6 / 9 |
+| Dolphin | Finizen #963 / Palafin #964 (+1 Pikachu forms) | 9 |
+| Dragon | Dragonite #149 / Dratini #147 / Dragonair #148 / Charizard #6 / Bagon #371 / Shelgon #372 / Salamence #373 / Gible #443 / Gabite #444 / Garchomp #445 / Axew #610 / Fraxure #611 / Haxorus #612 / Deino #633 / Zweilous #634 / Hydreigon #635 / Druddigon #621 / Rayquaza #384 / Dialga #483 / Palkia #484 / Reshiram #643 / Zekrom #644 / Kyurem #646 / Frigibax #996 / Arctibax #997 / Baxcalibur #998 (+1 Pikachu forms) | 1 / 3 / 4 / 5 / 9 |
+| Duck | Psyduck #54 / Golduck #55 / Farfetch'd #83 / Ducklett #580 / Swanna #581 / Quaxly #912 / Quaxwell #913 | 1 / 5 / 9 |
+| Dumbo Octopus | Octillery #224 / Remoraid #223 | 2 |
+| Elephant | Donphan #232 / Phanpy #231 | 2 |
+| Ferret | Furret #162 / Sentret #161 | 2 |
+| Fox | Vulpix #37 / Ninetales #38 / Alolan Vulpix #37 / Alolan Ninetales #38 / Fennekin #653 😉 / Braixen #654 / Delphox #655 / Zorua #570 / Zoroark #571 / Hisuian Zorua #570 / Hisuian Zoroark #571 | 1 / 7 / 6 / 5 / 8 |
+| Frog | Froakie #656 😉 / Frogadier #657 / Greninja #658 / Poliwag #60 / Poliwhirl #61 / Poliwrath #62 / Politoed #186 / Croagunk #453 / Toxicroak #454 / Tympole #535 / Palpitoad #536 / Seismitoad #537 | 6 / 1 / 2 / 4 / 5 |
+| Giraffe | Farigiraf #981 / Girafarig #203 | 9 / 2 |
+| Goose | Quaquaval #914 / Quaxly #912 / Quaxwell #913 | 9 |
+| Gopher | Diglett #50 / Dugtrio #51 / Alolan Dugtrio #51 | 1 / 7 |
+| Grizzly | Ursaring #217 / Ursaluna #901 / Teddiursa #216 / Bloodmoon Ursaluna #901 / Cubchoo #613 / Beartic #614 | 2 / 8 / 5 |
+| Hamster | Pikachu #25 😉 / Pichu #172 / Raichu #26 😉 / Alolan Raichu #26 (+39 Pikachu forms) | 1 / 2 / 7 |
+| Hedgehog | Chespin #650 😉 / Quilladin #651 / Chesnaught #652 / Shaymin #492 (+1 Pikachu forms) | 6 / 4 |
+| Hippo | Hippopotas #449 / Hippowdon #450 | 4 |
+| Hyena | Mightyena #262 / Poochyena #261 | 3 |
 | Ibex | Gogoat #673 | 6 |
-| Ifrit | Hoopa #720 | 6 |
-| Iguana | Heliolisk #695 | 6 |
-| Jackal | Lucario #448 | 4 |
+| Ifrit | Hoopa #720 (+1 Pikachu forms) | 6 |
+| Iguana | Heliolisk #695 / Helioptile #694 | 6 |
+| Jackal | Lucario #448 / Riolu #447 | 4 |
 | Jackalope | Diggersby #660 | 6 |
 | Kangaroo | Kangaskhan #115 | 1 |
-| Kiwi | Natu #177 | 2 |
+| Kiwi | Natu #177 / Xatu #178 / Oricorio #741 (+3 Pikachu forms) | 2 / 7 |
 | Koala | Komala #775 | 7 |
-| Kraken | Tentacruel #73 | 1 |
-| Lemur | Aipom #190 | 2 |
-| Leopard | Liepard #510 | 5 |
-| Liger | Litleo #667 | 6 |
-| Llama | Mudbray #749 | 7 |
+| Kraken | Tentacruel #73 / Tentacool #72 / Gyarados #130 (+1 Pikachu forms) | 1 |
+| Lemur | Aipom #190 / Ambipom #424 | 2 / 4 |
+| Leopard | Liepard #510 / Purrloin #509 | 5 |
+| Liger | Litleo #667 / Pyroar #668 (+1 Pikachu forms) | 6 |
+| Llama | Mudbray #749 / Mudsdale #750 | 7 |
 | Manatee | Lapras #131 | 1 |
 | Mink | Buizel #418 / Floatzel #419 | 4 |
-| Monkey | Mankey #56 | 1 |
-| Moose | Wyrdeer #899 | 8 |
-| Narwhal | Cetitan #975 | 9 |
-| Nyan Cat | Meowth #52 | 1 |
-| Orangutan | Oranguru #765 | 7 |
-| Otter | Oshawott #501 😉 | 5 |
-| Panda | Pancham #674 | 6 |
-| Penguin | Piplup #393 😉 | 4 |
-| Platypus | Farfetch'd #83 | 1 |
-| Pumpkin | Pumpkaboo #710 | 6 |
-| Python | Ekans #23 | 1 |
-| Quagga | Zebstrika #523 | 5 |
+| Monkey | Mankey #56 / Primeape #57 / Annihilape #979 / Chimchar #390 😉 / Monferno #391 / Infernape #392 / Pansage #511 / Simisage #512 / Pansear #513 / Simisear #514 / Panpour #515 / Simipour #516 / Grafaiai #945 | 1 / 9 / 4 / 5 |
+| Moose | Wyrdeer #899 / Stantler #234 | 8 / 2 |
+| Narwhal | Cetitan #975 / Cetoddle #974 | 9 |
+| Nyan Cat | Meowth #52 / Alolan Meowth #52 / Skitty #300 / Delcatty #301 / Glameow #431 / Purugly #432 / Espurr #677 / Meowstic #678 / Sprigatito #906 / Floragato #907 / Meowscarada #908 (+1 Pikachu forms) | 1 / 7 / 3 / 4 / 6 / 9 |
+| Orangutan | Oranguru #765 / Passimian #766 | 7 |
+| Otter | Oshawott #501 😉 / Dewott #502 / Samurott #503 / Hisuian Samurott #503 | 5 / 8 |
+| Panda | Pancham #674 / Pangoro #675 | 6 |
+| Penguin | Piplup #393 😉 / Prinplup #394 / Empoleon #395 | 4 |
+| Platypus | Psyduck #54 / Golduck #55 | 1 |
+| Pumpkin | Pumpkaboo #710 / Gourgeist #711 | 6 |
+| Python | Ekans #23 / Arbok #24 / Seviper #336 / Snivy #495 😉 / Servine #496 / Serperior #497 | 1 / 3 / 5 |
+| Quagga | Zebstrika #523 / Blitzle #522 | 5 |
 | Quokka | Morpeko #877 | 8 |
-| Rabbit | Buneary #427 | 4 |
-| Raccoon | Zigzagoon #263 | 3 |
-| Rhino | Rhyhorn #111 | 1 |
-| Sheep | Mareep #179 | 2 |
-| Shrew | Sandshrew #27 / Rattata #19 / Alolan Rattata #19 | 1 / 7 |
-| Skunk | Stunky #434 | 4 |
-| Slow Loris | Slowpoke #79 | 1 |
+| Rabbit | Buneary #427 / Lopunny #428 / Raboot #814 | 4 / 8 |
+| Raccoon | Zigzagoon #263 / Linoone #264 | 3 |
+| Rhino | Rhyhorn #111 / Rhydon #112 / Rhyperior #464 | 1 / 4 |
+| Sheep | Mareep #179 / Flaaffy #180 / Ampharos #181 | 2 |
+| Shrew | Sandshrew #27 / Alolan Sandshrew #27 / Rattata #19 / Raticate #20 / Alolan Rattata #19 / Alolan Raticate #20 | 1 / 7 |
+| Skunk | Stunky #434 / Skuntank #435 | 4 |
+| Slow Loris | Slowpoke #79 / Slowbro #80 / Galarian Slowbro #80 / Slowking #199 | 1 / 8 / 2 |
 | Squirrel | Emolga #587 | 5 |
-| Tiger | Raikou #243 | 2 |
-| Turtle | Squirtle #7 😉 | 1 |
-| Unicorn | Rapidash #78 | 1 |
-| Walrus | Walrein #365 | 3 |
-| Wolf | Lycanroc #745 | 7 |
-| Wolverine | Sneasel #215 | 2 |
-| Wombat | Munchlax #446 | 4 |
+| Tiger | Raikou #243 / Litten #725 / Torracat #726 / Incineroar #727 | 2 / 7 |
+| Turtle | Squirtle #7 😉 / Wartortle #8 / Blastoise #9 / Turtwig #387 😉 / Grotle #388 / Torterra #389 / Tirtouga #564 / Carracosta #565 | 1 / 4 / 5 |
+| Unicorn | Rapidash #78 / Ponyta #77 | 1 |
+| Walrus | Walrein #365 / Spheal #363 / Sealeo #364 | 3 |
+| Wolf | Lycanroc #745 / Poochyena #261 / Mightyena #262 / Zorua #570 / Zoroark #571 / Hisuian Zorua #570 / Hisuian Zoroark #571 | 7 / 3 / 5 / 8 |
+| Wolverine | Sneasel #215 / Weavile #461 / Hisuian Sneasel #215 / Sneasler #903 | 2 / 4 / 8 |
+| Wombat | Munchlax #446 / Snorlax #143 | 4 / 1 |
 | *Bear (retired)* | Teddiursa #216 | 2 |
 | *Dog (retired)* | Fidough #926 | 9 |
 | *Lion (retired)* | Pyroar #668 | 6 |
@@ -193,7 +193,7 @@ Don't like a pick? Change the `dex` and `name` for that animal in `ANIMALS` in t
 ## Credits
 
 - Gen 1–7 icons: ripped from *Pokémon Shuffle* (3DS), via [The Spriters Resource](https://www.spriters-resource.com/3ds/pokemonshuffle/).
-- Gen 8–9 and regional-form Shuffle-style icons by [Loran-Hemlock](https://www.deviantart.com/loran-hemlock/gallery), loaded from DeviantArt (not re-hosted), personal and non-commercial use only per the artist's terms: Rookidee, Wyrdeer, Ursaluna, Morpeko, Paldean Tauros, Quaxly, Quaquaval, Fidough, Maschiff, Finizen, Palafin, Flamigo, Cetoddle, Cetitan, Farigiraf, Koraidon, Clodsire.
+- Gen 8–9 and regional-form Shuffle-style icons by [Loran-Hemlock](https://www.deviantart.com/loran-hemlock/gallery), loaded from DeviantArt (not re-hosted), personal and non-commercial use only per the artist's terms. All 48 used are listed with their deviation pages in the script's `DEVIANTART` table (marked 🌐 in the tables above), and Ctrl/Shift+click on one in a Doc opens its page.
 
 ## Disclaimer
 

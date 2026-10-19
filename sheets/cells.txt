@@ -145,3 +145,177 @@
 26       1  0,5    Raichu
 26-wink  1  1,5    Raichu (wink)
 26-alola 1  2,5    Alolan Raichu
+
+# Families (added for the family expansion)
+6        1  7,0    Charizard
+8        1  11,0   Wartortle
+9        1  12,0   Blastoise
+20       1  10,1   Raticate
+20-alola 1  11,1   Alolan Raticate
+24       1  1,2    Arbok
+27-alola 1  4,5    Alolan Sandshrew
+28-alola 1  6,5    Alolan Sandslash
+37-alola 1  4,6    Alolan Vulpix
+38       1  5,6    Ninetales
+38-alola 1  6,6    Alolan Ninetales
+42       1  12,6   Golbat
+51       1  8,7    Dugtrio
+51-alola 1  9,7    Alolan Dugtrio
+52-alola 1  11,7   Alolan Meowth
+53-alola 1  13,7   Alolan Persian
+55       1  1,8    Golduck
+57       1  3,8    Primeape
+58       1  4,8    Growlithe
+59       1  5,8    Arcanine
+60       1  6,8    Poliwag
+61       1  7,8    Poliwhirl
+62       1  8,8    Poliwrath
+72       1  4,9    Tentacool
+77       1  12,9   Ponyta
+80       1  1,10   Slowbro
+112      1  9,12   Rhydon
+128      1  12,13  Tauros
+130      1  1,14   Gyarados
+130-red  1  2,14   Gyarados (red)
+143      1  1,15   Snorlax
+147      1  5,15   Dratini
+148      1  6,15   Dragonair
+158      2  8,0    Totodile
+158-wink 2  9,0    Totodile (wink)
+159      2  10,0   Croconaw
+161      2  0,1    Sentret
+169      2  8,1    Crobat
+172      2  11,1   Pichu
+178      2  6,2    Xatu
+180      2  8,2    Flaaffy
+181      2  9,2    Ampharos
+186      2  4,3    Politoed
+195      2  4,4    Quagsire
+199      2  8,4    Slowking
+203      2  4,7    Girafarig
+209      2  10,7   Snubbull
+210      2  11,7   Granbull
+223      2  2,9    Remoraid
+228      2  8,9    Houndour
+229      2  9,9    Houndoom
+234      2  2,10   Stantler
+256      3  6,0    Combusken
+257      3  7,0    Blaziken
+258      3  8,0    Mudkip
+258-wink 3  9,0    Mudkip (wink)
+259      3  10,0   Marshtomp
+260      3  11,0   Swampert
+278      3  3,2    Wingull
+300      3  1,4    Skitty
+301      3  2,4    Delcatty
+302-mega 3  5,4    Mega Sableye
+309      3  12,4   Electrike
+310      3  0,5    Manectric
+322      3  1,6    Numel
+336      3  2,7    Seviper
+363      3  9,9    Spheal
+364      3  10,9   Sealeo
+371      3  4,10   Bagon
+372      3  5,10   Shelgon
+373      3  6,10   Salamence
+384      3  7,11   Rayquaza
+384-black 3 8,11   Rayquaza (black)
+387      4  0,0    Turtwig
+387-wink 4  1,0    Turtwig (wink)
+388      4  2,0    Grotle
+389      4  3,0    Torterra
+390      4  4,0    Chimchar
+390-wink 4  5,0    Chimchar (wink)
+391      4  6,0    Monferno
+392      4  7,0    Infernape
+394      4  10,0   Prinplup
+424      4  3,4    Ambipom
+428      4  7,4    Lopunny
+430      4  9,4    Honchkrow
+431      4  10,4   Glameow
+432      4  11,4   Purugly
+435      4  2,5    Skuntank
+443      4  10,5   Gible
+444      4  11,5   Gabite
+445      4  0,6    Garchomp
+447      4  2,6    Riolu
+450      4  5,6    Hippowdon
+453      4  10,6   Croagunk
+454      4  11,6   Toxicroak
+461      4  7,7    Weavile
+464      4  10,7   Rhyperior
+483      4  11,9   Dialga
+484      4  0,10   Palkia
+492      4  11,10  Shaymin (Land)
+492-sky  4  0,11   Shaymin (Sky)
+495      5  1,0    Snivy
+495-wink 5  2,0    Snivy (wink)
+496      5  3,0    Servine
+497      5  4,0    Serperior
+502      5  11,0   Dewott
+503      5  12,0   Samurott
+506      5  2,1    Lillipup
+507      5  3,1    Herdier
+508      5  4,1    Stoutland
+511      5  7,1    Pansage
+512      5  8,1    Simisage
+513      5  9,1    Pansear
+514      5  10,1   Simisear
+515      5  11,1   Panpour
+516      5  12,1   Simipour
+522      5  6,2    Blitzle
+527      5  11,2   Woobat
+528      5  12,2   Swoobat
+535      5  7,3    Tympole
+536      5  8,3    Palpitoad
+537      5  9,3    Seismitoad
+551      5  0,5    Sandile
+552      5  1,5    Krokorok
+553      5  2,5    Krookodile
+564      5  1,6    Tirtouga
+565      5  2,6    Carracosta
+570      5  7,6    Zorua
+571      5  8,6    Zoroark
+573      5  10,6   Cinccino
+580      5  4,7    Ducklett
+581      5  5,7    Swanna
+610      5  3,10   Axew
+611      5  4,10   Fraxure
+612      5  5,10   Haxorus
+613      5  6,10   Cubchoo
+621      5  1,11   Druddigon
+633      5  0,12   Deino
+634      5  1,12   Zweilous
+635      5  2,12   Hydreigon
+643      5  12,12  Reshiram
+644      5  0,13   Zekrom
+646      5  3,13   Kyurem
+651      6  2,0    Quilladin
+652      6  3,0    Chesnaught
+653      6  4,0    Fennekin
+653-wink 6  5,0    Fennekin (wink)
+654      6  6,0    Braixen
+655      6  7,0    Delphox
+657      6  1,1    Frogadier
+658      6  2,1    Greninja
+668-f    6  5,2    Pyroar (female)
+675      6  3,3    Pangoro
+676      6  4,3    Furfrou
+677      6  5,3    Espurr
+678      6  6,3    Meowstic (male)
+678-f    6  7,3    Meowstic (female)
+694      6  8,5    Helioptile
+696      6  1,6    Tyrunt
+698      6  3,6    Amaura
+699      6  4,6    Aurorus
+711      6  2,8    Gourgeist
+714      6  6,8    Noibat
+715      6  7,8    Noivern
+720-confined 6 1,10 Hoopa (Confined)
+725      7  3,0    Litten
+726      7  4,0    Torracat
+741      7  1,2    Oricorio (Baile)
+741-pompom 7 2,2   Oricorio (Pom-Pom)
+741-pau  7  3,2    Oricorio (Pa'u)
+741-sensu 7 4,2    Oricorio (Sensu)
+750      7  4,3    Mudsdale
