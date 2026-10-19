@@ -61,7 +61,7 @@ If a sheet has gaps or extra forms, pin any Pokémon to a specific cell with `po
 
 ### Sprites needed per generation
 
-🌐 = loaded from Loran-Hemlock's DeviantArt, ✅ = bundled in `sprites/`, unmarked = PokeAPI fallback for now, 😉 = winks half the time.
+✅ = bundled in `sprites/`, 😉 = with winks, 🌐 = loaded from Loran-Hemlock's DeviantArt, unmarked = PokeAPI fallback for now.
 
 | Gen | Count | Pokémon |
 |---|---|---|
@@ -199,7 +199,7 @@ Don't like a pick? Change the `dex` and `name` for that animal in `ANIMALS` in t
 
 ## AI Usage
 
-I did most of the cherry Picking for the sprites, claude did the code, as well as the Deviantart fetch system. it will be inpossible to make the code without dear Claude.
+I did most of the cherry Picking for the sprites, claude did the code, as well as the Deviantart fetch system. it will be inpossible to make the code without Claude.
 
 ## Disclaimer
 
