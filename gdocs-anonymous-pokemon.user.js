@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google Docs Anonymous Pokémon
 // @namespace    https://github.com/liangforstudy/gdocs-anonymous-pokemon
-// @version      1.4.0
+// @version      1.4.2
 // @description  Replaces Google Docs/Sheets/Slides "Anonymous Animal" viewers with Pokémon (name + avatar).
 // @author       liangforstudy
 // @match        https://docs.google.com/*
@@ -404,7 +404,7 @@
       { dex: 261, name: 'Poochyena' },
     ] },
     ibex:         { label: 'Ibex',          dex: 673, name: 'Gogoat' },
-    ifrit:        { label: 'Ifrit',         dex: 720, name: 'Hoopa', alts: [
+    ifrit:        { label: 'Ifrit',         dex: 720, name: 'Hoopa Unbound', alts: [
       { dex: 720, name: 'Hoopa', sprite: '720-confined' },
     ] },
     iguana:       { label: 'Iguana',        dex: 695, name: 'Heliolisk', alts: [
@@ -859,10 +859,14 @@
   const NAME_RE = new RegExp(`\\b(Anonymous)\\s+(${labels.join('|')})\\b`, 'gi');
   const ATTRS = ['title', 'aria-label', 'data-tooltip', 'alt', 'data-name'];
 
-  // Never touch the document body itself, only Docs UI chrome.
+  // Never touch the document body itself, only Docs UI chrome. Collaborator
+  // cursor flags ("Anonymous Cormorant" above someone's caret) live inside the
+  // editor area but are Google's labels, so they are allowed through.
+  const COLLAB_LABEL = '[class*="cursor"], [class*="collab"], [class*="presence"]';
   function inEditor(node) {
     const el = node.nodeType === 1 ? node : node.parentElement;
-    return !!(el && el.closest('.kix-appview-editor, [contenteditable="true"], .waffle, .punch-viewer-content'));
+    if (!el || el.closest(COLLAB_LABEL)) return false;
+    return !!el.closest('.kix-appview-editor, [contenteditable="true"], .waffle, .punch-viewer-content');
   }
 
   // Display names read off avatars, e.g. "Anonymous Chicken" -> chicken. Covers
@@ -879,19 +883,25 @@
     const label = text.trim();
     // Need "<word> <animal>": a one-word label would match inside its own replacement.
     if (!REPLACE_NAMES || learned.has(label) || label.split(/\s+/).length < 2) return;
-    learned.set(label, key);
+    // Whole words only: "Anonymous Hippo" must not match inside its own
+    // replacement "Anonymous Hippopotas".
+    const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    learned.set(label, { key, re: new RegExp(`(?<![\\p{L}\\p{N}])${escaped}(?![\\p{L}\\p{N}])`, 'gu') });
     queue(document.body); // the viewer list may already be on screen
   }
 
   function hasLearned(str) {
-    for (const label of learned.keys()) if (str.includes(label)) return true;
+    for (const { re } of learned.values()) {
+      re.lastIndex = 0;
+      if (re.test(str)) return true;
+    }
     return false;
   }
 
   function swapNames(str) {
     let out = str.replace(NAME_RE, (_, anon, animal) => `${anon} ${pick(LABEL_TO_KEY.get(animal.toLowerCase())).name}`);
-    for (const [label, key] of learned) {
-      if (out.includes(label)) out = out.split(label).join(localized(label, key));
+    for (const [label, { key, re }] of learned) {
+      out = out.replace(re, () => localized(label, key));
     }
     return out === str ? null : out;
   }
@@ -1007,7 +1017,9 @@
     processElement(root);
     root.querySelectorAll('img, [style*="background"], [title], [aria-label], [data-tooltip]').forEach(processElement);
 
-    if (REPLACE_NAMES && !inEditor(root)) {
+    // Walk even inside the editor: inEditor() is checked per text node, so
+    // cursor flags get through while document text is skipped.
+    if (REPLACE_NAMES) {
       const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
         acceptNode: (n) => ((/anonymous/i.test(n.nodeValue) || hasLearned(n.nodeValue)) && !inEditor(n)
           ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT),
