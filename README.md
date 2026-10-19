@@ -1,4 +1,4 @@
-# Google Docs Anonymous Pokémon
+# Anonymous Pokémon in Google Docs
 
 A Tampermonkey userscript that turns Google Docs / Sheets / Slides **anonymous animals** into Pokémon.
 
