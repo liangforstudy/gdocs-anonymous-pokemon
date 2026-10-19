@@ -23,7 +23,7 @@ Everything runs locally in your browser and only changes what you see.
 
 ## Sprites
 
-Avatars use Pokémon Shuffle-style icons, tried in this order:
+Avatars use Pokémon Shuffle-style icons from these sources:
 
 1. **Gen 1–7**: the [`sprites/`](sprites) folder, named `<dex>.png`, or `<dex>-<region>.png` for regional forms such as `128-paldea.png` (128×128, transparent). These are cut from the Pokémon Shuffle sheets in [`sheets/`](sheets). To change or add one, edit [`sheets/cells.txt`](sheets/cells.txt) (dex, gen, column,row of the cell, counted from 0) and run `powershell -File sheets\crop.ps1`.
 2. **Gen 8–9 and regional forms**: [Loran-Hemlock's icons](https://www.deviantart.com/loran-hemlock/gallery), loaded straight from DeviantArt's CDN at 128×128. Nothing is re-hosted in this repo, and you don't need to download anything. The `DEVIANTART` table in the script maps each Pokémon to its deviation.

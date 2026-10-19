@@ -3,7 +3,7 @@
 // @namespace    https://github.com/liangforstudy/gdocs-anonymous-pokemon
 // @version      1.3.0
 // @description  Replaces Google Docs/Sheets/Slides "Anonymous Animal" viewers with Pokémon (name + avatar).
-// @author       YOUR_NAME
+// @author       liangforstudy
 // @match        https://docs.google.com/*
 // @grant        GM_xmlhttpRequest
 // @connect      raw.githubusercontent.com
